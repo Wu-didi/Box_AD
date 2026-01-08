@@ -5,7 +5,9 @@
 fast_lidar_obstacle_detector_node.py
 
 高效激光障碍物探测节点（优化版，无 Open3D、无 DBSCAN）：
-- 订阅 /rslidar_points_prev (sensor_msgs/PointCloud2)
+- 订阅 /rslidar_points_prev (sensor_msgs/PointCloud2) - 前方雷达
+- 订阅 /rslidar_points_left (sensor_msgs/PointCloud2) - 左侧雷达
+- 订阅 /rslidar_points_right (sensor_msgs/PointCloud2) - 右侧雷达
 - 粗略估计全局地面高度
 - 在 ROI 内用 2D 栅格统计"高于地面的点"
 - 输出每个占用栅格的中心作为障碍物位置
@@ -13,6 +15,7 @@ fast_lidar_obstacle_detector_node.py
 优化内容：
 - 使用 numpy 直接解析 PointCloud2，避免 Python for 循环
 - 使用 numpy.bincount 做网格统计，替代字典累加
+- 支持多雷达点云融合
 
 发布：
 - /fast_obstacles (std_msgs/String, JSON)
@@ -270,10 +273,33 @@ class FastLidarObstacleDetectorNode(Node):
         self.timing_sum_read = 0.0
         self.timing_sum_detect = 0.0
 
-        self.sub = self.create_subscription(
+        # 点云缓存（存储最新的点云数据）
+        self.cloud_prev: Optional[np.ndarray] = None
+        self.cloud_left: Optional[np.ndarray] = None
+        self.cloud_right: Optional[np.ndarray] = None
+        self.latest_header = None  # 保存最新的消息头
+
+        # 订阅前方雷达
+        self.sub_prev = self.create_subscription(
             PointCloud2,
             "/rslidar_points_prev",
-            self.lidar_callback,
+            self.lidar_callback_prev,
+            10
+        )
+
+        # 订阅左侧雷达
+        self.sub_left = self.create_subscription(
+            PointCloud2,
+            "/rslidar_points_left",
+            self.lidar_callback_left,
+            10
+        )
+
+        # 订阅右侧雷达
+        self.sub_right = self.create_subscription(
+            PointCloud2,
+            "/rslidar_points_right",
+            self.lidar_callback_right,
             10
         )
 
@@ -285,16 +311,61 @@ class FastLidarObstacleDetectorNode(Node):
 
         self.get_logger().info(
             "FastLidarObstacleDetectorNode started (optimized). "
-            "Subscribing /rslidar_points_prev, publishing /fast_obstacles"
+            "Subscribing /rslidar_points_prev, /rslidar_points_left, /rslidar_points_right, "
+            "publishing /fast_obstacles"
         )
 
-    def lidar_callback(self, msg: PointCloud2):
+    def lidar_callback_prev(self, msg: PointCloud2):
+        """前方雷达回调"""
+        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        if xyz.shape[0] > 0:
+            self.cloud_prev = xyz
+            self.latest_header = msg.header
+        self.process_merged_clouds()
+
+    def lidar_callback_left(self, msg: PointCloud2):
+        """左侧雷达回调"""
+        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        if xyz.shape[0] > 0:
+            self.cloud_left = xyz
+            self.latest_header = msg.header
+        self.process_merged_clouds()
+
+    def lidar_callback_right(self, msg: PointCloud2):
+        """右侧雷达回调"""
+        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        if xyz.shape[0] > 0:
+            self.cloud_right = xyz
+            self.latest_header = msg.header
+        self.process_merged_clouds()
+
+    def process_merged_clouds(self):
+        """合并多个雷达点云并进行障碍物检测"""
+        # 检查是否有任何点云数据
+        if self.latest_header is None:
+            return
+
         # 计时开始
         if self.timing_enabled:
             t0 = time.perf_counter()
 
-        # PointCloud2 -> numpy（优化版）
-        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        # 合并所有可用的点云
+        clouds_to_merge = []
+        if self.cloud_prev is not None and self.cloud_prev.shape[0] > 0:
+            clouds_to_merge.append(self.cloud_prev)
+        if self.cloud_left is not None and self.cloud_left.shape[0] > 0:
+            clouds_to_merge.append(self.cloud_left)
+        if self.cloud_right is not None and self.cloud_right.shape[0] > 0:
+            clouds_to_merge.append(self.cloud_right)
+
+        if len(clouds_to_merge) == 0:
+            return
+
+        # 合并点云
+        if len(clouds_to_merge) == 1:
+            xyz = clouds_to_merge[0]
+        else:
+            xyz = np.vstack(clouds_to_merge)
 
         if self.timing_enabled:
             t1 = time.perf_counter()
@@ -318,17 +389,17 @@ class FastLidarObstacleDetectorNode(Node):
                 avg_read = self.timing_sum_read / self.timing_count * 1000
                 avg_detect = self.timing_sum_detect / self.timing_count * 1000
                 self.get_logger().debug(
-                    f"性能统计(平均): 点云读取={avg_read:.2f}ms, "
+                    f"性能统计(平均): 点云合并={avg_read:.2f}ms, "
                     f"障碍物检测={avg_detect:.2f}ms, "
                     f"总计={avg_read + avg_detect:.2f}ms"
                 )
 
         result = {
             "stamp": {
-                "sec": int(msg.header.stamp.sec),
-                "nanosec": int(msg.header.stamp.nanosec),
+                "sec": int(self.latest_header.stamp.sec),
+                "nanosec": int(self.latest_header.stamp.nanosec),
             },
-            "frame_id": msg.header.frame_id,
+            "frame_id": self.latest_header.frame_id,
             "has_obstacle": bool(len(obstacles) > 0),
             "obstacles": obstacles
         }

@@ -22,11 +22,13 @@ class HybridAstarTest:
         self.wheelbase = 2.85
         self.max_steer = 1.047  # 60度
 
-        # Hybrid A* 参数
-        self.motion_step = 1.5
+        # Hybrid A* 参数 - 优化版
+        self.motion_step = 2.5      # 增大步长
         self.num_steers = 5
-        self.theta_resolution = math.radians(15)
+        self.theta_resolution = math.radians(20)  # 20度分辨率
         self.robot_radius = 1.5
+        self.goal_xy_threshold = 3.0
+        self.goal_theta_threshold = math.radians(30)
 
         self.steer_angles = np.linspace(-self.max_steer, self.max_steer, self.num_steers).tolist()
 
@@ -97,6 +99,37 @@ class HybridAstarTest:
                     return nx, ny
         return None
 
+    def compute_heuristic_map(self, goal_r, goal_c):
+        """使用优化的 BFS 计算考虑障碍物的距离场"""
+        from collections import deque
+
+        dist_map = np.full((self.height, self.width), np.inf, dtype=np.float32)
+
+        # 检查目标是否可通行
+        if not self.is_free(goal_r, goal_c):
+            print(f"[警告] 目标点在障碍物内")
+            return dist_map
+
+        dist_map[goal_r, goal_c] = 0
+        queue = deque([(goal_r, goal_c)])
+
+        # 4邻域
+        moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+        while queue:
+            r, c = queue.popleft()
+            current_dist = dist_map[r, c]
+            next_dist = current_dist + 1
+
+            for dr, dc in moves:
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < self.height and 0 <= nc < self.width:
+                    if self.grid[nr, nc] == 0 and dist_map[nr, nc] == np.inf:
+                        dist_map[nr, nc] = next_dist
+                        queue.append((nr, nc))
+
+        return dist_map
+
     def check_path_collision(self, x1, y1, x2, y2):
         dist = math.hypot(x2 - x1, y2 - y1)
         if dist < 0.01:
@@ -132,7 +165,7 @@ class HybridAstarTest:
         return new_x, new_y, new_theta
 
     def hybrid_astar(self, start, goal):
-        """Hybrid A* - 只允许前进"""
+        """优化版 Hybrid A* - 使用预计算启发式地图"""
         sx, sy, s_theta = start
         gx, gy, g_theta = goal
 
@@ -144,19 +177,38 @@ class HybridAstarTest:
             print(f"[错误] 终点 ({gx:.1f}, {gy:.1f}) 在障碍物内!")
             return None
 
-        xy_threshold = 2.0
-        theta_threshold = math.radians(30)
+        start_time = time.time()
+
+        # 预计算启发式地图
+        gr, gc = self.world_to_grid(gx, gy)
+        print(f"  计算启发式地图...")
+        heuristic_map = self.compute_heuristic_map(gr, gc)
+        h_time = time.time() - start_time
+        print(f"  启发式地图完成，耗时 {h_time:.2f}s")
+
+        # 检查是否可达
+        sr, sc = self.world_to_grid(sx, sy)
+        if heuristic_map[sr, sc] == np.inf:
+            print(f"[错误] 目标不可达（被障碍物隔断）")
+            return None
+
+        xy_threshold = self.goal_xy_threshold
+        theta_threshold = self.goal_theta_threshold
 
         def theta_index(theta):
             theta = theta % (2 * math.pi)
             return int(theta / self.theta_resolution)
 
         def heuristic(x, y, theta):
-            dist = math.hypot(x - gx, y - gy)
+            r, c = self.world_to_grid(x, y)
+            if not self.in_bounds(r, c):
+                return float('inf')
+            h = heuristic_map[r, c] * self.resolution
             angle_diff = abs(theta - g_theta)
             if angle_diff > math.pi:
                 angle_diff = 2 * math.pi - angle_diff
-            return dist + 0.5 * angle_diff * self.wheelbase
+            h += 0.3 * angle_diff * self.wheelbase
+            return h
 
         def state_key(x, y, theta):
             r, c = self.world_to_grid(x, y)
@@ -174,12 +226,12 @@ class HybridAstarTest:
         counter += 1
 
         visited = set()
-        max_iterations = 100000
-        start_time = time.time()
+        max_iterations = 200000
+        last_print = time.time()
 
         for iteration in range(max_iterations):
             if not open_set:
-                print(f"[Hybrid A*] 开放列表为空")
+                print(f"[失败] 开放列表为空")
                 return None
 
             _, _, current_key = heapq.heappop(open_set)
@@ -198,14 +250,20 @@ class HybridAstarTest:
                 key = current_key
                 while key is not None:
                     state = state_map[key]
-                    path.append(state)  # (x, y, theta)
+                    path.append(state)
                     key = came_from[key]
                 path.reverse()
                 path.append((gx, gy, g_theta))
-
                 elapsed = time.time() - start_time
-                print(f"[Hybrid A*] 成功! 迭代={iteration}, 时间={elapsed:.2f}s, 点数={len(path)}")
+                print(f"[成功] 迭代={iteration}, 总耗时={elapsed:.2f}s, 点数={len(path)}")
                 return path
+
+            # 进度输出
+            current_time = time.time()
+            if current_time - last_print > 2.0:
+                elapsed = current_time - start_time
+                print(f"  进度: 迭代={iteration}, 已访问={len(visited)}, 距离={dist_to_goal:.1f}m, 耗时={elapsed:.1f}s")
+                last_print = current_time
 
             current_g = g_cost[current_key]
 
@@ -221,7 +279,7 @@ class HybridAstarTest:
                 if neighbor_key in visited:
                     continue
 
-                step_cost = self.motion_step + 0.2 * abs(steer)
+                step_cost = self.motion_step + 0.1 * abs(steer)
                 new_g = current_g + step_cost
 
                 if neighbor_key not in g_cost or new_g < g_cost[neighbor_key]:
@@ -232,11 +290,7 @@ class HybridAstarTest:
                     heapq.heappush(open_set, (f, counter, neighbor_key))
                     counter += 1
 
-            if iteration % 10000 == 0 and iteration > 0:
-                elapsed = time.time() - start_time
-                print(f"  迭代={iteration}, 距离={dist_to_goal:.1f}m, 时间={elapsed:.1f}s")
-
-        print(f"[Hybrid A*] 达到最大迭代")
+        print(f"[失败] 达到最大迭代")
         return None
 
     def visualize(self, path, start, goal, title, zoom=True):
@@ -421,6 +475,34 @@ def main():
     print("注意: 禁止倒车，车辆需要画U型弯掉头")
     path4 = planner.hybrid_astar(start, goal)
     planner.visualize(path4, start, goal, "4_uturn_180deg")
+
+    # 测试5: 长距离规划 (50m+)
+    print("\n" + "="*60)
+    print("测试5: 长距离规划 (约100m)")
+    print("="*60)
+
+    # 选择地图上距离较远的两个自由点
+    p5_start = free_regions[0]
+    # 在y方向找一个远的点
+    p5_goal = None
+    for p in reversed(free_regions):
+        if math.hypot(p[0] - p5_start[0], p[1] - p5_start[1]) > 80:
+            p5_goal = p
+            break
+
+    if p5_goal is None:
+        p5_goal = free_regions[-1]
+
+    start = (p5_start[0], p5_start[1], math.radians(90))
+    goal = (p5_goal[0], p5_goal[1], math.radians(90))
+
+    dist = math.hypot(p5_goal[0] - p5_start[0], p5_goal[1] - p5_start[1])
+    print(f"起点: ({p5_start[0]:.1f}, {p5_start[1]:.1f})")
+    print(f"终点: ({p5_goal[0]:.1f}, {p5_goal[1]:.1f})")
+    print(f"直线距离: {dist:.1f}m")
+
+    path5 = planner.hybrid_astar(start, goal)
+    planner.visualize(path5, start, goal, "5_long_distance")
 
 
 if __name__ == '__main__':

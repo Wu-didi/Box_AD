@@ -45,13 +45,13 @@ class AstarPlannerNode(Node):
         self.declare_parameter('wheelbase', 2.85)          # 轴距(m)
         self.declare_parameter('min_turning_radius', 1.65) # 最小转弯半径(m) = 轴距/tan(60°)
         self.declare_parameter('max_steer_angle', 1.047)   # 最大转向角(rad), 60度
-        self.declare_parameter('motion_step', 1.5)         # 每步前进距离(m), 加大以加速搜索
+        self.declare_parameter('motion_step', 2.5)         # 每步前进距离(m), 增大加速搜索
         self.declare_parameter('num_steer_angles', 5)      # 离散转向角数量
-        self.declare_parameter('theta_resolution', 0.26)   # 朝向角分辨率(rad), 约15度
+        self.declare_parameter('theta_resolution', 0.35)   # 朝向角分辨率(rad), 约20度
         self.declare_parameter('path_sample_step', 0.5)    # 最终路径采样步长(m)
-        self.declare_parameter('steer_penalty', 0.2)       # 转向惩罚系数
+        self.declare_parameter('steer_penalty', 0.1)       # 转向惩罚系数
         self.declare_parameter('steer_change_penalty', 0.3)  # 转向变化惩罚
-        self.declare_parameter('goal_xy_threshold', 2.0)   # 目标位置阈值(m)
+        self.declare_parameter('goal_xy_threshold', 3.0)   # 目标位置阈值(m)
         self.declare_parameter('goal_theta_threshold', 0.52)  # 目标朝向阈值(rad), 约30度
 
         self.wheelbase = float(self.get_parameter('wheelbase').value)
@@ -513,96 +513,167 @@ class AstarPlannerNode(Node):
 
         return None
 
-    # ========== Hybrid A* 算法 ==========
+    # ========== Hybrid A* 算法 (优化版) ==========
+
+    def compute_heuristic_map(self, goal_r, goal_c):
+        """
+        使用优化的 BFS 计算考虑障碍物的距离场
+        使用 deque + numpy 加速
+        """
+        from collections import deque
+
+        dist_map = np.full((self.height, self.width), np.inf, dtype=np.float32)
+
+        # 检查目标是否可通行
+        if not self.is_free(goal_r, goal_c):
+            print(f"[警告] 目标点在障碍物内，寻找最近自由点")
+            return dist_map
+
+        dist_map[goal_r, goal_c] = 0
+        queue = deque([(goal_r, goal_c)])
+
+        # 4邻域 (更快，对于启发式足够)
+        moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+        while queue:
+            r, c = queue.popleft()
+            current_dist = dist_map[r, c]
+            next_dist = current_dist + 1
+
+            for dr, dc in moves:
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < self.height and 0 <= nc < self.width:
+                    if self.grid[nr, nc] == 0 and dist_map[nr, nc] == np.inf:
+                        dist_map[nr, nc] = next_dist
+                        queue.append((nr, nc))
+
+        return dist_map
 
     def hybrid_astar(self, start_state, goal_state):
         """
-        Hybrid A* 算法：在 (x, y, theta) 状态空间中搜索，考虑车辆运动学约束。
-        只允许前进，不允许倒车。
+        优化版 Hybrid A*：
+        1. 使用预计算的2D距离场作为启发式
+        2. 更大的步长减少节点数
+        3. 分析扩展加速收敛
         """
         sx, sy, s_theta = start_state
         gx, gy, g_theta = goal_state
 
-        # 目标到达阈值（使用配置参数）
+        print(f"\n[Hybrid A*] ========== 开始规划 ==========")
+        print(f"[Hybrid A*] 起点: ({sx:.1f}, {sy:.1f}, {math.degrees(s_theta):.0f}°)")
+        print(f"[Hybrid A*] 终点: ({gx:.1f}, {gy:.1f}, {math.degrees(g_theta):.0f}°)")
+
+        start_time = time.time()
+
+        # 目标阈值
         xy_threshold = self.goal_xy_threshold
         theta_threshold = self.goal_theta_threshold
 
-        # 将朝向离散化为索引
-        def theta_to_index(theta):
-            theta = theta % (2 * math.pi)
-            return int(theta / self.theta_resolution) % int(2 * math.pi / self.theta_resolution + 1)
+        # 预计算启发式地图
+        gr, gc = self.world_to_grid(gx, gy)
+        print(f"[Hybrid A*] 正在计算启发式地图...")
+        heuristic_map = self.compute_heuristic_map(gr, gc)
+        h_time = time.time() - start_time
+        print(f"[Hybrid A*] 启发式地图计算完成，耗时 {h_time:.2f}s")
 
-        # 启发式函数：考虑距离和朝向差异
+        # 检查目标是否可达
+        sr, sc = self.world_to_grid(sx, sy)
+        if heuristic_map[sr, sc] == np.inf:
+            print(f"[Hybrid A*] 错误：目标不可达（被障碍物隔断）")
+            return None
+
+        # 启发式函数 - 使用预计算的距离
         def heuristic(x, y, theta):
-            dist = math.hypot(x - gx, y - gy)
+            r, c = self.world_to_grid(x, y)
+            if not self.in_bounds(r, c):
+                return float('inf')
+            h = heuristic_map[r, c] * self.resolution  # 转换为米
+            # 加上角度差惩罚
             angle_diff = abs(theta - g_theta)
             if angle_diff > math.pi:
                 angle_diff = 2 * math.pi - angle_diff
-            return dist + 0.5 * angle_diff * self.wheelbase
+            h += 0.3 * angle_diff * self.wheelbase
+            return h
 
-        # 车辆运动学模型
-        def vehicle_model(x, y, theta, steer):
-            step = self.motion_step
-            if abs(steer) < 0.01:
-                new_x = x + step * math.cos(theta)
-                new_y = y + step * math.sin(theta)
-                new_theta = theta
-            else:
-                turn_radius = self.wheelbase / math.tan(abs(steer))
-                beta = step / turn_radius
-                if steer < 0:
-                    beta = -beta
-                new_theta = theta + beta
-                new_x = x + turn_radius * (math.sin(new_theta) - math.sin(theta)) * np.sign(steer)
-                new_y = y - turn_radius * (math.cos(new_theta) - math.cos(theta)) * np.sign(steer)
+        # 角度离散化
+        theta_res = self.theta_resolution
+        def theta_to_index(theta):
+            theta = theta % (2 * math.pi)
+            return int(theta / theta_res)
 
-            while new_theta > math.pi:
-                new_theta -= 2 * math.pi
-            while new_theta < -math.pi:
-                new_theta += 2 * math.pi
-            return new_x, new_y, new_theta
-
-        # 检查路径段是否无碰撞
-        def is_path_free(x1, y1, x2, y2):
-            dist = math.hypot(x2 - x1, y2 - y1)
-            if dist < 0.01:
-                return self.is_world_free_point([x1, y1])
-            steps = max(int(dist / (self.resolution * 0.5)), 2)
-            for i in range(steps + 1):
-                t = i / steps
-                x = x1 + t * (x2 - x1)
-                y = y1 + t * (y2 - y1)
-                if not self.is_world_free_point([x, y]):
-                    return False
-            return True
-
-        # 状态空间离散化
+        # 状态key
         def state_key(x, y, theta):
             r, c = self.world_to_grid(x, y)
             ti = theta_to_index(theta)
             return (r, c, ti)
 
-        # 优先队列
-        counter = 0
-        open_set = []
+        # 车辆模型 - 使用更大步长
+        step = self.motion_step
+        def vehicle_model(x, y, theta, steer):
+            if abs(steer) < 0.01:
+                return x + step * math.cos(theta), y + step * math.sin(theta), theta
+            turn_radius = self.wheelbase / math.tan(abs(steer))
+            beta = step / turn_radius * (-1 if steer < 0 else 1)
+            new_theta = theta + beta
+            dx = turn_radius * (math.sin(new_theta) - math.sin(theta)) * np.sign(steer)
+            dy = -turn_radius * (math.cos(new_theta) - math.cos(theta)) * np.sign(steer)
+            # 归一化角度
+            while new_theta > math.pi: new_theta -= 2 * math.pi
+            while new_theta < -math.pi: new_theta += 2 * math.pi
+            return x + dx, y + dy, new_theta
+
+        # 快速碰撞检测
+        def is_path_free(x1, y1, x2, y2):
+            dist = math.hypot(x2 - x1, y2 - y1)
+            if dist < 0.01:
+                return self.is_world_free_point([x1, y1])
+            # 减少采样点数量加速
+            steps = max(int(dist / self.resolution), 2)
+            for i in range(steps + 1):
+                t = i / steps
+                r, c = self.world_to_grid(x1 + t * (x2 - x1), y1 + t * (y2 - y1))
+                if not self.in_bounds(r, c) or not self.is_free(r, c):
+                    return False
+            return True
+
+        # 尝试直接连接到目标（分析扩展）
+        def try_direct_connect(x, y, theta):
+            dist = math.hypot(gx - x, gy - y)
+            if dist > 15:  # 太远不尝试
+                return None
+            # 检查直线是否可行
+            if not is_path_free(x, y, gx, gy):
+                return None
+            # 检查角度是否接近
+            target_angle = math.atan2(gy - y, gx - x)
+            angle_diff = abs(theta - target_angle)
+            if angle_diff > math.pi:
+                angle_diff = 2 * math.pi - angle_diff
+            if angle_diff < math.radians(30):  # 角度差小于30度可以直连
+                return [(x, y), (gx, gy)]
+            return None
+
+        # 初始化搜索
         start_key = state_key(sx, sy, s_theta)
         g_cost = {start_key: 0.0}
         came_from = {start_key: None}
         state_map = {start_key: (sx, sy, s_theta)}
 
+        counter = 0
+        open_set = []
         heapq.heappush(open_set, (heuristic(sx, sy, s_theta), counter, start_key))
         counter += 1
 
         visited = set()
-        max_iterations = 100000
+        max_iterations = 200000
 
-        print(f"[Hybrid A*] 开始搜索，xy阈值={xy_threshold}m, theta阈值={math.degrees(theta_threshold):.0f}°")
-
-        start_time = time.time()
+        print(f"[Hybrid A*] 开始搜索，最大迭代={max_iterations}")
+        last_print_time = time.time()
 
         for iteration in range(max_iterations):
             if not open_set:
-                print(f"[Hybrid A*] 开放列表为空，搜索失败")
+                elapsed = time.time() - start_time
+                print(f"[Hybrid A*] 失败：开放列表为空，总耗时 {elapsed:.2f}s")
                 return None
 
             _, _, current_key = heapq.heappop(open_set)
@@ -613,14 +684,14 @@ class AstarPlannerNode(Node):
 
             cx, cy, c_theta = state_map[current_key]
 
-            # 检查是否到达目标
+            # 计算到目标的距离
             dist_to_goal = math.hypot(cx - gx, cy - gy)
             angle_to_goal = abs(c_theta - g_theta)
             if angle_to_goal > math.pi:
                 angle_to_goal = 2 * math.pi - angle_to_goal
 
+            # 检查是否到达目标
             if dist_to_goal < xy_threshold and angle_to_goal < theta_threshold:
-                # 回溯路径
                 path = []
                 key = current_key
                 while key is not None:
@@ -629,21 +700,43 @@ class AstarPlannerNode(Node):
                     key = came_from[key]
                 path.reverse()
                 path.append((gx, gy))
-
                 elapsed = time.time() - start_time
-                print(f"[Hybrid A*] 找到路径! 迭代={iteration}, 时间={elapsed:.2f}s, 路径点={len(path)}")
+                print(f"[Hybrid A*] 成功! 迭代={iteration}, 总耗时={elapsed:.2f}s, 路径点={len(path)}")
                 return path
 
-            # 展开邻居（只允许前进）
+            # 每隔一段时间尝试直接连接
+            if iteration % 100 == 0:
+                direct_path = try_direct_connect(cx, cy, c_theta)
+                if direct_path:
+                    # 回溯已有路径 + 直连
+                    path = []
+                    key = current_key
+                    while key is not None:
+                        state = state_map[key]
+                        path.append((state[0], state[1]))
+                        key = came_from[key]
+                    path.reverse()
+                    path.append((gx, gy))
+                    elapsed = time.time() - start_time
+                    print(f"[Hybrid A*] 成功(直连)! 迭代={iteration}, 总耗时={elapsed:.2f}s, 路径点={len(path)}")
+                    return path
+
+            # 进度输出 - 每2秒输出一次
+            current_time = time.time()
+            if current_time - last_print_time > 2.0:
+                elapsed = current_time - start_time
+                print(f"[Hybrid A*] 进度: 迭代={iteration}, 已访问={len(visited)}, "
+                      f"距离={dist_to_goal:.1f}m, 角度差={math.degrees(angle_to_goal):.0f}°, 耗时={elapsed:.1f}s")
+                last_print_time = current_time
+
+            # 展开邻居
             current_g = g_cost[current_key]
 
             for steer in self.steer_angles:
                 nx, ny, n_theta = vehicle_model(cx, cy, c_theta, steer)
 
-                nr, nc = self.world_to_grid(nx, ny)
-                if not self.in_bounds(nr, nc):
+                if not self.in_bounds(*self.world_to_grid(nx, ny)):
                     continue
-
                 if not is_path_free(cx, cy, nx, ny):
                     continue
 
@@ -651,10 +744,7 @@ class AstarPlannerNode(Node):
                 if neighbor_key in visited:
                     continue
 
-                # 计算代价
-                step_cost = self.motion_step
-                step_cost += self.steer_penalty * abs(steer)
-
+                step_cost = step + self.steer_penalty * abs(steer)
                 new_g = current_g + step_cost
 
                 if neighbor_key not in g_cost or new_g < g_cost[neighbor_key]:
@@ -665,11 +755,8 @@ class AstarPlannerNode(Node):
                     heapq.heappush(open_set, (f, counter, neighbor_key))
                     counter += 1
 
-            if iteration % 10000 == 0 and iteration > 0:
-                elapsed = time.time() - start_time
-                print(f"[Hybrid A*] 迭代={iteration}, 已访问={len(visited)}, 距离={dist_to_goal:.1f}m, 时间={elapsed:.1f}s")
-
-        print(f"[Hybrid A*] 达到最大迭代次数，搜索失败")
+        elapsed = time.time() - start_time
+        print(f"[Hybrid A*] 失败：达到最大迭代 {max_iterations}，总耗时 {elapsed:.2f}s")
         return None
 
     # ----- 路径平滑：line-of-sight -----

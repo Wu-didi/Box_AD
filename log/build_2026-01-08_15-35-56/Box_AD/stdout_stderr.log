@@ -1,0 +1,42 @@
+running egg_info
+writing build/Box_AD/Box_AD.egg-info/PKG-INFO
+writing dependency_links to build/Box_AD/Box_AD.egg-info/dependency_links.txt
+writing entry points to build/Box_AD/Box_AD.egg-info/entry_points.txt
+writing requirements to build/Box_AD/Box_AD.egg-info/requires.txt
+writing top-level names to build/Box_AD/Box_AD.egg-info/top_level.txt
+reading manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+writing manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+running build
+running build_py
+copying Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+copying Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+running install
+running install_lib
+copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/test_hybrid_astar_v2.py to test_hybrid_astar_v2.cpython-38.pyc
+byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/fast_lidar_obstacle_detector_node.py to fast_lidar_obstacle_detector_node.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info' (and everything under it)
+Copying build/Box_AD/Box_AD.egg-info to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info
+running install_scripts
+Installing astar_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing auto_drive_panel script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing can_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing ego_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing fast_lidar_obstacle_detector script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing fast_obstacle_rviz_in_map script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing fast_obstacle_temporal_filter_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing follow_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing gps_imu_to_utm_pose script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing imu_gps_logger script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing local_path_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing local_path_to_follow script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing local_path_to_mpc script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing local_planner_astar script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing mpc_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing path_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing png_map_publisher script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+Installing publish_imu script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+writing list of installed files to '/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log'

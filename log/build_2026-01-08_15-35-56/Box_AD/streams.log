@@ -1,0 +1,44 @@
+[2.032s] Invoking command in '/home/nvidia/vcii/wudi/Box_AD': PYTHONPATH=/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/prefix_override:/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Box_AD build --build-base /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build install --record /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log --install-scripts $base/lib/Box_AD --single-version-externally-managed
+[2.402s] running egg_info
+[2.403s] writing build/Box_AD/Box_AD.egg-info/PKG-INFO
+[2.404s] writing dependency_links to build/Box_AD/Box_AD.egg-info/dependency_links.txt
+[2.404s] writing entry points to build/Box_AD/Box_AD.egg-info/entry_points.txt
+[2.405s] writing requirements to build/Box_AD/Box_AD.egg-info/requires.txt
+[2.405s] writing top-level names to build/Box_AD/Box_AD.egg-info/top_level.txt
+[2.456s] reading manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+[2.458s] writing manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+[2.459s] running build
+[2.459s] running build_py
+[2.460s] copying Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.462s] copying Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.464s] running install
+[2.465s] running install_lib
+[2.468s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.469s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.470s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/test_hybrid_astar_v2.py to test_hybrid_astar_v2.cpython-38.pyc
+[2.478s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/fast_lidar_obstacle_detector_node.py to fast_lidar_obstacle_detector_node.cpython-38.pyc
+[2.481s] running install_data
+[2.482s] running install_egg_info
+[2.487s] removing '/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info' (and everything under it)
+[2.487s] Copying build/Box_AD/Box_AD.egg-info to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info
+[2.489s] running install_scripts
+[2.518s] Installing astar_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.518s] Installing auto_drive_panel script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.518s] Installing can_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.519s] Installing ego_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.519s] Installing fast_lidar_obstacle_detector script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.519s] Installing fast_obstacle_rviz_in_map script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.519s] Installing fast_obstacle_temporal_filter_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.520s] Installing follow_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.520s] Installing gps_imu_to_utm_pose script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.520s] Installing imu_gps_logger script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.520s] Installing local_path_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.520s] Installing local_path_to_follow script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.521s] Installing local_path_to_mpc script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.521s] Installing local_planner_astar script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.523s] Installing mpc_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.524s] Installing path_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.524s] Installing png_map_publisher script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.524s] Installing publish_imu script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.524s] writing list of installed files to '/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log'
+[2.587s] Invoked command in '/home/nvidia/vcii/wudi/Box_AD' returned '0': PYTHONPATH=/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/prefix_override:/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Box_AD build --build-base /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build install --record /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log --install-scripts $base/lib/Box_AD --single-version-externally-managed
