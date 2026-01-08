@@ -1,0 +1,159 @@
+[2.023s] Invoking command in '/home/nvidia/vcii/wudi/Box_AD': PYTHONPATH=/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/prefix_override:/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Box_AD build --build-base /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build install --record /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log --install-scripts $base/lib/Box_AD --single-version-externally-managed
+[2.399s] running egg_info
+[2.400s] creating build/Box_AD/Box_AD.egg-info
+[2.400s] writing build/Box_AD/Box_AD.egg-info/PKG-INFO
+[2.401s] writing dependency_links to build/Box_AD/Box_AD.egg-info/dependency_links.txt
+[2.401s] writing entry points to build/Box_AD/Box_AD.egg-info/entry_points.txt
+[2.401s] writing requirements to build/Box_AD/Box_AD.egg-info/requires.txt
+[2.402s] writing top-level names to build/Box_AD/Box_AD.egg-info/top_level.txt
+[2.404s] writing manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+[2.453s] reading manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+[2.454s] writing manifest file 'build/Box_AD/Box_AD.egg-info/SOURCES.txt'
+[2.455s] running build
+[2.455s] running build_py
+[2.455s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build
+[2.456s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib
+[2.457s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.457s] copying Box_AD/gps_imu_to_utm_pose_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.457s] copying Box_AD/imu_gps_logger.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.458s] copying Box_AD/can_use.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.458s] copying Box_AD/imu_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.458s] copying Box_AD/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD
+[2.458s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.458s] copying Box_AD/planner/local_planner_astar_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.458s] copying Box_AD/planner/trajectory_smoother.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.458s] copying Box_AD/planner/global_planner_astar_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.458s] copying Box_AD/planner/test_hybrid_astar.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.458s] copying Box_AD/planner/local_path_to_mpc_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] copying Box_AD/planner/local_path_planner_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] copying Box_AD/planner/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] copying Box_AD/planner/global_planner_astar_node copy.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] copying Box_AD/planner/local_path_to_follow_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] copying Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner
+[2.459s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.459s] copying Box_AD/follow_traj_wd/can_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.460s] copying Box_AD/follow_traj_wd/auto_drive_panel_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.460s] copying Box_AD/follow_traj_wd/follow_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.460s] copying Box_AD/follow_traj_wd/can_use.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] copying Box_AD/follow_traj_wd/utils.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] copying Box_AD/follow_traj_wd/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] copying Box_AD/follow_traj_wd/follow_demo_mpc_bank.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] copying Box_AD/follow_traj_wd/follow_demo_2025.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] copying Box_AD/follow_traj_wd/mpc_node_v2.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd
+[2.461s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/map
+[2.462s] copying Box_AD/map/png_map_publisher.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/map
+[2.462s] copying Box_AD/map/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/map
+[2.463s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer
+[2.463s] copying Box_AD/visualizer/ego_visualizer_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer
+[2.463s] copying Box_AD/visualizer/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer
+[2.463s] copying Box_AD/visualizer/path_visualizer_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer
+[2.463s] creating /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.463s] copying Box_AD/perception/fast_obstacle_temporal_filter_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.463s] copying Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.463s] copying Box_AD/perception/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.463s] copying Box_AD/perception/fast_obstacle_visualizer_node_in_map.py -> /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception
+[2.464s] running install
+[2.466s] running install_lib
+[2.468s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.468s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/gps_imu_to_utm_pose_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.468s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.468s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/local_planner_astar_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.468s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/trajectory_smoother.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.469s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/global_planner_astar_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.469s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/test_hybrid_astar.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.469s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/local_path_to_mpc_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.469s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/local_path_planner_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.470s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.470s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/global_planner_astar_node copy.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.470s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/local_path_to_follow_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.470s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/planner/test_hybrid_astar_v2.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner
+[2.470s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.470s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/can_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/auto_drive_panel_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/follow_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/can_use.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/utils.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/follow_demo_mpc_bank.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/follow_demo_2025.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.471s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/follow_traj_wd/mpc_node_v2.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd
+[2.472s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/imu_gps_logger.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.472s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/can_use.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.472s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/imu_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.472s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD
+[2.472s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/map
+[2.472s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/map/png_map_publisher.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/map
+[2.473s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/map/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/map
+[2.473s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer
+[2.473s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer/ego_visualizer_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer
+[2.473s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer
+[2.473s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/visualizer/path_visualizer_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer
+[2.474s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.474s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/fast_obstacle_temporal_filter_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.475s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/fast_lidar_obstacle_detector_node.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.475s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/__init__.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.475s] copying /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build/lib/Box_AD/perception/fast_obstacle_visualizer_node_in_map.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception
+[2.475s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/gps_imu_to_utm_pose_node.py to gps_imu_to_utm_pose_node.cpython-38.pyc
+[2.479s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/local_planner_astar_node.py to local_planner_astar_node.cpython-38.pyc
+[2.488s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/trajectory_smoother.py to trajectory_smoother.cpython-38.pyc
+[2.493s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/global_planner_astar_node.py to global_planner_astar_node.cpython-38.pyc
+[2.499s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/test_hybrid_astar.py to test_hybrid_astar.cpython-38.pyc
+[2.503s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/local_path_to_mpc_node.py to local_path_to_mpc_node.cpython-38.pyc
+[2.504s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/local_path_planner_node.py to local_path_planner_node.cpython-38.pyc
+[2.510s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/__init__.py to __init__.cpython-38.pyc
+[2.510s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/global_planner_astar_node copy.py to global_planner_astar_node copy.cpython-38.pyc
+[2.518s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/local_path_to_follow_node.py to local_path_to_follow_node.cpython-38.pyc
+[2.519s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/test_hybrid_astar_v2.py to test_hybrid_astar_v2.cpython-38.pyc
+[2.523s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/can_node.py to can_node.cpython-38.pyc
+[2.524s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/auto_drive_panel_node.py to auto_drive_panel_node.cpython-38.pyc
+[2.526s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/follow_node.py to follow_node.cpython-38.pyc
+[2.527s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/can_use.py to can_use.cpython-38.pyc
+[2.529s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/utils.py to utils.cpython-38.pyc
+[2.529s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__init__.py to __init__.cpython-38.pyc
+[2.530s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/follow_demo_mpc_bank.py to follow_demo_mpc_bank.cpython-38.pyc
+[2.535s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/follow_demo_2025.py to follow_demo_2025.cpython-38.pyc
+[2.538s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/mpc_node_v2.py to mpc_node_v2.cpython-38.pyc
+[2.539s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/imu_gps_logger.py to imu_gps_logger.cpython-38.pyc
+[2.540s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/can_use.py to can_use.cpython-38.pyc
+[2.541s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/imu_node.py to imu_node.cpython-38.pyc
+[2.543s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/__init__.py to __init__.cpython-38.pyc
+[2.543s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/map/png_map_publisher.py to png_map_publisher.cpython-38.pyc
+[2.544s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/map/__init__.py to __init__.cpython-38.pyc
+[2.544s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer/ego_visualizer_node.py to ego_visualizer_node.cpython-38.pyc
+[2.547s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer/__init__.py to __init__.cpython-38.pyc
+[2.547s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/visualizer/path_visualizer_node.py to path_visualizer_node.cpython-38.pyc
+[2.549s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/fast_obstacle_temporal_filter_node.py to fast_obstacle_temporal_filter_node.cpython-38.pyc
+[2.550s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/fast_lidar_obstacle_detector_node.py to fast_lidar_obstacle_detector_node.cpython-38.pyc
+[2.553s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/__init__.py to __init__.cpython-38.pyc
+[2.553s] byte-compiling /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/fast_obstacle_visualizer_node_in_map.py to fast_obstacle_visualizer_node_in_map.cpython-38.pyc
+[2.556s] running install_data
+[2.558s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/ament_index
+[2.558s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/ament_index/resource_index
+[2.558s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/ament_index/resource_index/packages
+[2.558s] copying resource/Box_AD -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/ament_index/resource_index/packages
+[2.559s] copying package.xml -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD
+[2.559s] creating /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD/launch
+[2.559s] copying launch/box_ad.launch.py -> /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD/launch
+[2.559s] running install_egg_info
+[2.562s] Copying build/Box_AD/Box_AD.egg-info to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info
+[2.563s] running install_scripts
+[2.595s] Installing astar_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.595s] Installing auto_drive_panel script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing can_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing ego_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing fast_lidar_obstacle_detector script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing fast_obstacle_rviz_in_map script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing fast_obstacle_temporal_filter_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing follow_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.596s] Installing gps_imu_to_utm_pose script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing imu_gps_logger script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing local_path_planner_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing local_path_to_follow script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing local_path_to_mpc script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing local_planner_astar script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.597s] Installing mpc_node script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.598s] Installing path_visualizer script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.598s] Installing png_map_publisher script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.598s] Installing publish_imu script to /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD
+[2.600s] writing list of installed files to '/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log'
+[2.663s] Invoked command in '/home/nvidia/vcii/wudi/Box_AD' returned '0': PYTHONPATH=/home/nvidia/vcii/wudi/Box_AD/build/Box_AD/prefix_override:/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Box_AD build --build-base /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/build install --record /home/nvidia/vcii/wudi/Box_AD/build/Box_AD/install.log --install-scripts $base/lib/Box_AD --single-version-externally-managed
