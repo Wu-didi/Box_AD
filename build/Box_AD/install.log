@@ -14,7 +14,6 @@
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/local_path_to_follow_node.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/test_hybrid_astar_v2.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/can_node.py
-/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/auto_drive_panel_node.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/follow_node.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/can_use.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/utils.py
@@ -47,7 +46,6 @@
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/__pycache__/local_path_to_follow_node.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/planner/__pycache__/test_hybrid_astar_v2.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__pycache__/can_node.cpython-38.pyc
-/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__pycache__/auto_drive_panel_node.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__pycache__/follow_node.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__pycache__/can_use.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/follow_traj_wd/__pycache__/utils.cpython-38.pyc
@@ -66,6 +64,7 @@
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD/perception/__pycache__/fast_obstacle_visualizer_node_in_map.cpython-38.pyc
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/ament_index/resource_index/packages/Box_AD
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD/package.xml
+/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD/launch/box_ad_ros2.launch.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/share/Box_AD/launch/box_ad.launch.py
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info/dependency_links.txt
 /home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/python3.8/site-packages/Box_AD-0.0.0-py3.8.egg-info/requires.txt

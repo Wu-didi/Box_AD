@@ -1,0 +1,458 @@
+[0.000000] (-) TimerEvent: {}
+[0.000259] (ros2_hybrid_a_star) JobQueued: {'identifier': 'ros2_hybrid_a_star', 'dependencies': OrderedDict()}
+[0.001626] (ros2_hybrid_a_star) JobStarted: {'identifier': 'ros2_hybrid_a_star'}
+[0.099365] (-) TimerEvent: {}
+[0.199825] (-) TimerEvent: {}
+[0.300143] (-) TimerEvent: {}
+[0.364896] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'cmake'}
+[0.365776] (ros2_hybrid_a_star) Command: {'cmd': ['/usr/bin/cmake', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star'], 'cwd': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '192.168.1.69 33834 22'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('LC_TIME', 'zh_CN.UTF-8'), ('DISABLE_TELEMETRY', '1'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/helpers/browser.sh'), ('CLAUDE_CODE_MAX_OUTPUT_TOKENS', '20000'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia/vcii/wudi/Box_AD'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('NVM_BIN', '/home/nvidia/.nvm/versions/node/v24.12.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-80ae6593-1f02-4f32-9acf-3bbd61d6dbef.sock'), ('NVM_INC', '/home/nvidia/.nvm/versions/node/v24.12.0/include/node'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/nvidia/.nvm'), ('COLCON_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nvidia'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421524312429'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Concord'), ('CLAUDE_CODE_SSE_PORT', '17215'), ('XDG_SESSION_CLASS', 'user'), ('ANTHROPIC_BASE_URL', 'https://co.yes.vg'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-11.4/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/remote-cli:/home/nvidia/.local/bin:/home/nvidia/.nvm/versions/node/v24.12.0/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/nvidia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISABLE_ERROR_REPORTING', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8fc3cd4a38e52535.txt'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/nvidia/.vscode-server/data/User/workspaceStorage/ca069b7bb03b0e568510cf7b5f4669bc/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d7e44eae8c.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('ANTHROPIC_AUTH_TOKEN', 'cr_3cead773e57deb581eaba88d758e8c0c6150f8bb5e4ae82e7e5755748aedf50b'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('MAX_THINKING_TOKENS', '12000'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.69 33834 192.168.1.102 22'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.400336] (-) TimerEvent: {}
+[0.499976] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.500439] (-) TimerEvent: {}
+[0.600636] (-) TimerEvent: {}
+[0.615817] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.630192] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.700776] (-) TimerEvent: {}
+[0.801110] (-) TimerEvent: {}
+[0.809159] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.809749] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.901256] (-) TimerEvent: {}
+[0.959844] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.972244] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.972882] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.980490] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.001398] (-) TimerEvent: {}
+[1.101724] (-) TimerEvent: {}
+[1.160321] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.162176] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.201860] (-) TimerEvent: {}
+[1.302189] (-) TimerEvent: {}
+[1.318521] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.340038] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.340805] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.350672] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.396147] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.396705] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.402476] (-) TimerEvent: {}
+[1.502992] (-) TimerEvent: {}
+[1.603527] (-) TimerEvent: {}
+[1.703973] (-) TimerEvent: {}
+[1.760339] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.799911] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.804113] (-) TimerEvent: {}
+[1.865503] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.875519] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.904318] (-) TimerEvent: {}
+[2.004798] (-) TimerEvent: {}
+[2.105210] (-) TimerEvent: {}
+[2.107347] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.162945] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[2.205810] (-) TimerEvent: {}
+[2.297287] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.305904] (-) TimerEvent: {}
+[2.377092] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[2.379002] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.380917] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.406035] (-) TimerEvent: {}
+[2.506353] (-) TimerEvent: {}
+[2.516200] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.517154] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.606526] (-) TimerEvent: {}
+[2.699850] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[2.700712] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[2.708294] (-) TimerEvent: {}
+[2.808669] (-) TimerEvent: {}
+[2.839360] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[2.839746] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[2.908805] (-) TimerEvent: {}
+[3.009215] (-) TimerEvent: {}
+[3.016312] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[3.019335] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.109361] (-) TimerEvent: {}
+[3.209750] (-) TimerEvent: {}
+[3.251894] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[3.310002] (-) TimerEvent: {}
+[3.402265] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)\n'}
+[3.410162] (-) TimerEvent: {}
+[3.505167] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[3.507010] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Checking for module 'libglog'\n"}
+[3.510441] (-) TimerEvent: {}
+[3.541036] (ros2_hybrid_a_star) StdoutLine: {'line': b'--   Found libglog, version 0.4.0\n'}
+[3.610589] (-) TimerEvent: {}
+[3.634795] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[3.710735] (-) TimerEvent: {}
+[3.766159] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.774145] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.774690] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/include\n'}
+[3.774825] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.782039] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.782395] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.783903] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.786349] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.788055] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[3.795982] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.796423] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.797718] (ros2_hybrid_a_star) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.805641] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.810871] (-) TimerEvent: {}
+[3.827518] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Generating done\n'}
+[3.830643] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Build files have been written to: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star\n'}
+[3.853702] (ros2_hybrid_a_star) CommandEnded: {'returncode': 0}
+[3.857025] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'build'}
+[3.860158] (ros2_hybrid_a_star) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '192.168.1.69 33834 22'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('LC_TIME', 'zh_CN.UTF-8'), ('DISABLE_TELEMETRY', '1'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/helpers/browser.sh'), ('CLAUDE_CODE_MAX_OUTPUT_TOKENS', '20000'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia/vcii/wudi/Box_AD'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('NVM_BIN', '/home/nvidia/.nvm/versions/node/v24.12.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-80ae6593-1f02-4f32-9acf-3bbd61d6dbef.sock'), ('NVM_INC', '/home/nvidia/.nvm/versions/node/v24.12.0/include/node'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/nvidia/.nvm'), ('COLCON_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nvidia'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421524312429'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Concord'), ('CLAUDE_CODE_SSE_PORT', '17215'), ('XDG_SESSION_CLASS', 'user'), ('ANTHROPIC_BASE_URL', 'https://co.yes.vg'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-11.4/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/remote-cli:/home/nvidia/.local/bin:/home/nvidia/.nvm/versions/node/v24.12.0/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/nvidia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISABLE_ERROR_REPORTING', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8fc3cd4a38e52535.txt'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/nvidia/.vscode-server/data/User/workspaceStorage/ca069b7bb03b0e568510cf7b5f4669bc/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d7e44eae8c.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('ANTHROPIC_AUTH_TOKEN', 'cr_3cead773e57deb581eaba88d758e8c0c6150f8bb5e4ae82e7e5755748aedf50b'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('MAX_THINKING_TOKENS', '12000'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.69 33834 192.168.1.102 22'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[3.911101] (-) TimerEvent: {}
+[3.970455] (ros2_hybrid_a_star) StdoutLine: {'line': b'Scanning dependencies of target hybrid_a_star_lib\n'}
+[3.997373] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/hybrid_a_star_lib.dir/src/hybrid_a_star.cpp.o\n'}
+[3.997777] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/hybrid_a_star_lib.dir/src/rs_path.cpp.o\n'}
+[4.011237] (-) TimerEvent: {}
+[4.112374] (-) TimerEvent: {}
+[4.212789] (-) TimerEvent: {}
+[4.313150] (-) TimerEvent: {}
+[4.413557] (-) TimerEvent: {}
+[4.514177] (-) TimerEvent: {}
+[4.614511] (-) TimerEvent: {}
+[4.714840] (-) TimerEvent: {}
+[4.815173] (-) TimerEvent: {}
+[4.915518] (-) TimerEvent: {}
+[5.015842] (-) TimerEvent: {}
+[5.116181] (-) TimerEvent: {}
+[5.216544] (-) TimerEvent: {}
+[5.316879] (-) TimerEvent: {}
+[5.417209] (-) TimerEvent: {}
+[5.517574] (-) TimerEvent: {}
+[5.618750] (-) TimerEvent: {}
+[5.719102] (-) TimerEvent: {}
+[5.819457] (-) TimerEvent: {}
+[5.919808] (-) TimerEvent: {}
+[6.020149] (-) TimerEvent: {}
+[6.120914] (-) TimerEvent: {}
+[6.221229] (-) TimerEvent: {}
+[6.321568] (-) TimerEvent: {}
+[6.425409] (-) TimerEvent: {}
+[6.525788] (-) TimerEvent: {}
+[6.626102] (-) TimerEvent: {}
+[6.728471] (-) TimerEvent: {}
+[6.828808] (-) TimerEvent: {}
+[6.929195] (-) TimerEvent: {}
+[7.029560] (-) TimerEvent: {}
+[7.129925] (-) TimerEvent: {}
+[7.230290] (-) TimerEvent: {}
+[7.330639] (-) TimerEvent: {}
+[7.430928] (-) TimerEvent: {}
+[7.531267] (-) TimerEvent: {}
+[7.632483] (-) TimerEvent: {}
+[7.732841] (-) TimerEvent: {}
+[7.833292] (-) TimerEvent: {}
+[7.933650] (-) TimerEvent: {}
+[8.034002] (-) TimerEvent: {}
+[8.134361] (-) TimerEvent: {}
+[8.234724] (-) TimerEvent: {}
+[8.335057] (-) TimerEvent: {}
+[8.435378] (-) TimerEvent: {}
+[8.535732] (-) TimerEvent: {}
+[8.636058] (-) TimerEvent: {}
+[8.736414] (-) TimerEvent: {}
+[8.836743] (-) TimerEvent: {}
+[8.937118] (-) TimerEvent: {}
+[9.037462] (-) TimerEvent: {}
+[9.137785] (-) TimerEvent: {}
+[9.162350] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 60%] Linking CXX static library libhybrid_a_star_lib.a\n'}
+[9.237969] (-) TimerEvent: {}
+[9.287308] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 60%] Built target hybrid_a_star_lib\n'}
+[9.338132] (-) TimerEvent: {}
+[9.420688] (ros2_hybrid_a_star) StdoutLine: {'line': b'Scanning dependencies of target hybrid_a_star_node\n'}
+[9.438271] (-) TimerEvent: {}
+[9.454944] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 80%] Building CXX object CMakeFiles/hybrid_a_star_node.dir/src/hybrid_a_star_node.cpp.o\n'}
+[9.538392] (-) TimerEvent: {}
+[9.638734] (-) TimerEvent: {}
+[9.739100] (-) TimerEvent: {}
+[9.839442] (-) TimerEvent: {}
+[9.939776] (-) TimerEvent: {}
+[10.040137] (-) TimerEvent: {}
+[10.140554] (-) TimerEvent: {}
+[10.240992] (-) TimerEvent: {}
+[10.341351] (-) TimerEvent: {}
+[10.444461] (-) TimerEvent: {}
+[10.544795] (-) TimerEvent: {}
+[10.645117] (-) TimerEvent: {}
+[10.745436] (-) TimerEvent: {}
+[10.845786] (-) TimerEvent: {}
+[10.946142] (-) TimerEvent: {}
+[11.046466] (-) TimerEvent: {}
+[11.146801] (-) TimerEvent: {}
+[11.247128] (-) TimerEvent: {}
+[11.347472] (-) TimerEvent: {}
+[11.447842] (-) TimerEvent: {}
+[11.548227] (-) TimerEvent: {}
+[11.648603] (-) TimerEvent: {}
+[11.748971] (-) TimerEvent: {}
+[11.849338] (-) TimerEvent: {}
+[11.949706] (-) TimerEvent: {}
+[12.050194] (-) TimerEvent: {}
+[12.150649] (-) TimerEvent: {}
+[12.251071] (-) TimerEvent: {}
+[12.351457] (-) TimerEvent: {}
+[12.451853] (-) TimerEvent: {}
+[12.552248] (-) TimerEvent: {}
+[12.652655] (-) TimerEvent: {}
+[12.753088] (-) TimerEvent: {}
+[12.853485] (-) TimerEvent: {}
+[12.953933] (-) TimerEvent: {}
+[13.054270] (-) TimerEvent: {}
+[13.154668] (-) TimerEvent: {}
+[13.255077] (-) TimerEvent: {}
+[13.355451] (-) TimerEvent: {}
+[13.455787] (-) TimerEvent: {}
+[13.556118] (-) TimerEvent: {}
+[13.656456] (-) TimerEvent: {}
+[13.756792] (-) TimerEvent: {}
+[13.857140] (-) TimerEvent: {}
+[13.957466] (-) TimerEvent: {}
+[14.057814] (-) TimerEvent: {}
+[14.158218] (-) TimerEvent: {}
+[14.258582] (-) TimerEvent: {}
+[14.358927] (-) TimerEvent: {}
+[14.365356] (ros2_hybrid_a_star) StderrLine: {'line': b'/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp: In function \xe2\x80\x98void utm_to_latlon(double, double, int, char, double&, double&)\xe2\x80\x99:\n'}
+[14.365980] (ros2_hybrid_a_star) StderrLine: {'line': b'/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp:74:12: warning: unused variable \xe2\x80\x98x\xe2\x80\x99 [-Wunused-variable]\n'}
+[14.366199] (ros2_hybrid_a_star) StderrLine: {'line': b'   74 |     double x = easting - 500000.0;\n'}
+[14.366312] (ros2_hybrid_a_star) StderrLine: {'line': b'      |            ^\n'}
+[14.459091] (-) TimerEvent: {}
+[14.559428] (-) TimerEvent: {}
+[14.659766] (-) TimerEvent: {}
+[14.760112] (-) TimerEvent: {}
+[14.860493] (-) TimerEvent: {}
+[14.960856] (-) TimerEvent: {}
+[15.061208] (-) TimerEvent: {}
+[15.161518] (-) TimerEvent: {}
+[15.261871] (-) TimerEvent: {}
+[15.362211] (-) TimerEvent: {}
+[15.462575] (-) TimerEvent: {}
+[15.563034] (-) TimerEvent: {}
+[15.663491] (-) TimerEvent: {}
+[15.763791] (-) TimerEvent: {}
+[15.864124] (-) TimerEvent: {}
+[15.964523] (-) TimerEvent: {}
+[16.064859] (-) TimerEvent: {}
+[16.165229] (-) TimerEvent: {}
+[16.265555] (-) TimerEvent: {}
+[16.365873] (-) TimerEvent: {}
+[16.466204] (-) TimerEvent: {}
+[16.566575] (-) TimerEvent: {}
+[16.666896] (-) TimerEvent: {}
+[16.767335] (-) TimerEvent: {}
+[16.867724] (-) TimerEvent: {}
+[16.968153] (-) TimerEvent: {}
+[17.068563] (-) TimerEvent: {}
+[17.169155] (-) TimerEvent: {}
+[17.269486] (-) TimerEvent: {}
+[17.369792] (-) TimerEvent: {}
+[17.470158] (-) TimerEvent: {}
+[17.570512] (-) TimerEvent: {}
+[17.670899] (-) TimerEvent: {}
+[17.771248] (-) TimerEvent: {}
+[17.871610] (-) TimerEvent: {}
+[17.971989] (-) TimerEvent: {}
+[18.072334] (-) TimerEvent: {}
+[18.172704] (-) TimerEvent: {}
+[18.273101] (-) TimerEvent: {}
+[18.373523] (-) TimerEvent: {}
+[18.473887] (-) TimerEvent: {}
+[18.574511] (-) TimerEvent: {}
+[18.674881] (-) TimerEvent: {}
+[18.775231] (-) TimerEvent: {}
+[18.875579] (-) TimerEvent: {}
+[18.975904] (-) TimerEvent: {}
+[19.076233] (-) TimerEvent: {}
+[19.176615] (-) TimerEvent: {}
+[19.276963] (-) TimerEvent: {}
+[19.377306] (-) TimerEvent: {}
+[19.477640] (-) TimerEvent: {}
+[19.577966] (-) TimerEvent: {}
+[19.678354] (-) TimerEvent: {}
+[19.778700] (-) TimerEvent: {}
+[19.879029] (-) TimerEvent: {}
+[19.979492] (-) TimerEvent: {}
+[20.079845] (-) TimerEvent: {}
+[20.180187] (-) TimerEvent: {}
+[20.280544] (-) TimerEvent: {}
+[20.380917] (-) TimerEvent: {}
+[20.481335] (-) TimerEvent: {}
+[20.581843] (-) TimerEvent: {}
+[20.682245] (-) TimerEvent: {}
+[20.782594] (-) TimerEvent: {}
+[20.882946] (-) TimerEvent: {}
+[20.983289] (-) TimerEvent: {}
+[21.083628] (-) TimerEvent: {}
+[21.184051] (-) TimerEvent: {}
+[21.284402] (-) TimerEvent: {}
+[21.384745] (-) TimerEvent: {}
+[21.485163] (-) TimerEvent: {}
+[21.585535] (-) TimerEvent: {}
+[21.685867] (-) TimerEvent: {}
+[21.788328] (-) TimerEvent: {}
+[21.888681] (-) TimerEvent: {}
+[21.989053] (-) TimerEvent: {}
+[22.089419] (-) TimerEvent: {}
+[22.189766] (-) TimerEvent: {}
+[22.290257] (-) TimerEvent: {}
+[22.390651] (-) TimerEvent: {}
+[22.491029] (-) TimerEvent: {}
+[22.591425] (-) TimerEvent: {}
+[22.691782] (-) TimerEvent: {}
+[22.792210] (-) TimerEvent: {}
+[22.892584] (-) TimerEvent: {}
+[22.992956] (-) TimerEvent: {}
+[23.093308] (-) TimerEvent: {}
+[23.193640] (-) TimerEvent: {}
+[23.293991] (-) TimerEvent: {}
+[23.394339] (-) TimerEvent: {}
+[23.494671] (-) TimerEvent: {}
+[23.595003] (-) TimerEvent: {}
+[23.695392] (-) TimerEvent: {}
+[23.795741] (-) TimerEvent: {}
+[23.896074] (-) TimerEvent: {}
+[23.996419] (-) TimerEvent: {}
+[24.096751] (-) TimerEvent: {}
+[24.197093] (-) TimerEvent: {}
+[24.297403] (-) TimerEvent: {}
+[24.397737] (-) TimerEvent: {}
+[24.498116] (-) TimerEvent: {}
+[24.598437] (-) TimerEvent: {}
+[24.698795] (-) TimerEvent: {}
+[24.799167] (-) TimerEvent: {}
+[24.899485] (-) TimerEvent: {}
+[24.999825] (-) TimerEvent: {}
+[25.100162] (-) TimerEvent: {}
+[25.200468] (-) TimerEvent: {}
+[25.300886] (-) TimerEvent: {}
+[25.401284] (-) TimerEvent: {}
+[25.501654] (-) TimerEvent: {}
+[25.601989] (-) TimerEvent: {}
+[25.702339] (-) TimerEvent: {}
+[25.802672] (-) TimerEvent: {}
+[25.903643] (-) TimerEvent: {}
+[26.007070] (-) TimerEvent: {}
+[26.107399] (-) TimerEvent: {}
+[26.207700] (-) TimerEvent: {}
+[26.308038] (-) TimerEvent: {}
+[26.408387] (-) TimerEvent: {}
+[26.508690] (-) TimerEvent: {}
+[26.609005] (-) TimerEvent: {}
+[26.709369] (-) TimerEvent: {}
+[26.809688] (-) TimerEvent: {}
+[26.909994] (-) TimerEvent: {}
+[27.010308] (-) TimerEvent: {}
+[27.110624] (-) TimerEvent: {}
+[27.210949] (-) TimerEvent: {}
+[27.311282] (-) TimerEvent: {}
+[27.411613] (-) TimerEvent: {}
+[27.511967] (-) TimerEvent: {}
+[27.612407] (-) TimerEvent: {}
+[27.712811] (-) TimerEvent: {}
+[27.813182] (-) TimerEvent: {}
+[27.913563] (-) TimerEvent: {}
+[28.013918] (-) TimerEvent: {}
+[28.114258] (-) TimerEvent: {}
+[28.214616] (-) TimerEvent: {}
+[28.315971] (-) TimerEvent: {}
+[28.416304] (-) TimerEvent: {}
+[28.516640] (-) TimerEvent: {}
+[28.616962] (-) TimerEvent: {}
+[28.717265] (-) TimerEvent: {}
+[28.817563] (-) TimerEvent: {}
+[28.917873] (-) TimerEvent: {}
+[29.018326] (-) TimerEvent: {}
+[29.118741] (-) TimerEvent: {}
+[29.219062] (-) TimerEvent: {}
+[29.319385] (-) TimerEvent: {}
+[29.419705] (-) TimerEvent: {}
+[29.519997] (-) TimerEvent: {}
+[29.620311] (-) TimerEvent: {}
+[29.720643] (-) TimerEvent: {}
+[29.820995] (-) TimerEvent: {}
+[29.921321] (-) TimerEvent: {}
+[30.021640] (-) TimerEvent: {}
+[30.124495] (-) TimerEvent: {}
+[30.224817] (-) TimerEvent: {}
+[30.325136] (-) TimerEvent: {}
+[30.425448] (-) TimerEvent: {}
+[30.525765] (-) TimerEvent: {}
+[30.626083] (-) TimerEvent: {}
+[30.726408] (-) TimerEvent: {}
+[30.826730] (-) TimerEvent: {}
+[30.927056] (-) TimerEvent: {}
+[31.027351] (-) TimerEvent: {}
+[31.127660] (-) TimerEvent: {}
+[31.227994] (-) TimerEvent: {}
+[31.328386] (-) TimerEvent: {}
+[31.428771] (-) TimerEvent: {}
+[31.529089] (-) TimerEvent: {}
+[31.629444] (-) TimerEvent: {}
+[31.729785] (-) TimerEvent: {}
+[31.830104] (-) TimerEvent: {}
+[31.930433] (-) TimerEvent: {}
+[32.030787] (-) TimerEvent: {}
+[32.131131] (-) TimerEvent: {}
+[32.231469] (-) TimerEvent: {}
+[32.331806] (-) TimerEvent: {}
+[32.432215] (-) TimerEvent: {}
+[32.532609] (-) TimerEvent: {}
+[32.633002] (-) TimerEvent: {}
+[32.733351] (-) TimerEvent: {}
+[32.833698] (-) TimerEvent: {}
+[32.934033] (-) TimerEvent: {}
+[32.983921] (ros2_hybrid_a_star) StdoutLine: {'line': b'[100%] Linking CXX executable hybrid_a_star_node\n'}
+[33.034273] (-) TimerEvent: {}
+[33.134648] (-) TimerEvent: {}
+[33.235003] (-) TimerEvent: {}
+[33.335491] (-) TimerEvent: {}
+[33.435848] (-) TimerEvent: {}
+[33.536177] (-) TimerEvent: {}
+[33.636455] (-) TimerEvent: {}
+[33.736792] (-) TimerEvent: {}
+[33.837141] (-) TimerEvent: {}
+[33.937466] (-) TimerEvent: {}
+[34.037762] (-) TimerEvent: {}
+[34.119829] (ros2_hybrid_a_star) StdoutLine: {'line': b'[100%] Built target hybrid_a_star_node\n'}
+[34.137902] (-) TimerEvent: {}
+[34.150647] (ros2_hybrid_a_star) CommandEnded: {'returncode': 0}
+[34.222987] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'install'}
+[34.238131] (-) TimerEvent: {}
+[34.245125] (ros2_hybrid_a_star) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'], 'cwd': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '192.168.1.69 33834 22'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('LC_TIME', 'zh_CN.UTF-8'), ('DISABLE_TELEMETRY', '1'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/helpers/browser.sh'), ('CLAUDE_CODE_MAX_OUTPUT_TOKENS', '20000'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia/vcii/wudi/Box_AD'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('NVM_BIN', '/home/nvidia/.nvm/versions/node/v24.12.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-80ae6593-1f02-4f32-9acf-3bbd61d6dbef.sock'), ('NVM_INC', '/home/nvidia/.nvm/versions/node/v24.12.0/include/node'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/nvidia/.nvm'), ('COLCON_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nvidia'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421524312429'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Concord'), ('CLAUDE_CODE_SSE_PORT', '17215'), ('XDG_SESSION_CLASS', 'user'), ('ANTHROPIC_BASE_URL', 'https://co.yes.vg'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-11.4/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/remote-cli:/home/nvidia/.local/bin:/home/nvidia/.nvm/versions/node/v24.12.0/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/nvidia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISABLE_ERROR_REPORTING', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8fc3cd4a38e52535.txt'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/nvidia/.vscode-server/data/User/workspaceStorage/ca069b7bb03b0e568510cf7b5f4669bc/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d7e44eae8c.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('ANTHROPIC_AUTH_TOKEN', 'cr_3cead773e57deb581eaba88d758e8c0c6150f8bb5e4ae82e7e5755748aedf50b'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('MAX_THINKING_TOKENS', '12000'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.69 33834 192.168.1.102 22'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[34.274144] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[34.274943] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[34.275432] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/ros2_hybrid_a_star/hybrid_a_star_node\n'}
+[34.294749] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/launch/hybrid_a_star.launch.py\n'}
+[34.313134] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/hybrid_a_star.h\n'}
+[34.332243] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/rs_path.h\n'}
+[34.338220] (-) TimerEvent: {}
+[34.349226] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/state_node.h\n'}
+[34.367765] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/type.h\n'}
+[34.387788] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/package_run_dependencies/ros2_hybrid_a_star\n'}
+[34.407744] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/parent_prefix_path/ros2_hybrid_a_star\n'}
+[34.427988] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.sh\n'}
+[34.438390] (-) TimerEvent: {}
+[34.456643] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.dsv\n'}
+[34.482675] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.sh\n'}
+[34.517372] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.dsv\n'}
+[34.537942] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.bash\n'}
+[34.538373] (-) TimerEvent: {}
+[34.567979] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.sh\n'}
+[34.587874] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.zsh\n'}
+[34.618807] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.dsv\n'}
+[34.638019] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.dsv\n'}
+[34.638420] (-) TimerEvent: {}
+[34.658564] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/packages/ros2_hybrid_a_star\n'}
+[34.691608] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig.cmake\n'}
+[34.711358] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig-version.cmake\n'}
+[34.732018] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.xml\n'}
+[34.738548] (-) TimerEvent: {}
+[34.764907] (ros2_hybrid_a_star) CommandEnded: {'returncode': 0}
+[34.838780] (-) TimerEvent: {}
+[34.939517] (-) TimerEvent: {}
+[35.039960] (-) TimerEvent: {}
+[35.140441] (-) TimerEvent: {}
+[35.240878] (-) TimerEvent: {}
+[35.341520] (-) TimerEvent: {}
+[35.386788] (ros2_hybrid_a_star) JobEnded: {'identifier': 'ros2_hybrid_a_star', 'rc': 0}
+[35.388486] (-) EventReactorShutdown: {}

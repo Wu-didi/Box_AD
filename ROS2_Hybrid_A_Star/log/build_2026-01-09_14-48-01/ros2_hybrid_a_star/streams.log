@@ -1,0 +1,36 @@
+[0.338s] Invoking command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star -- -j12 -l12
+[0.456s] [ 60%] Built target hybrid_a_star_lib
+[0.540s] Scanning dependencies of target hybrid_a_star_node
+[0.604s] [ 80%] Building CXX object CMakeFiles/hybrid_a_star_node.dir/src/hybrid_a_star_node.cpp.o
+[5.756s] /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp: In function ‘void utm_to_latlon(double, double, int, char, double&, double&)’:
+[5.757s] /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp:74:12: warning: unused variable ‘x’ [-Wunused-variable]
+[5.757s]    74 |     double x = easting - 500000.0;
+[5.757s]       |            ^
+[24.399s] [100%] Linking CXX executable hybrid_a_star_node
+[25.456s] [100%] Built target hybrid_a_star_node
+[25.481s] Invoked command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star -- -j12 -l12
+[25.581s] Invoking command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star
+[25.605s] -- Install configuration: ""
+[25.606s] -- Execute custom install script
+[25.606s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/ros2_hybrid_a_star/hybrid_a_star_node
+[25.607s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/launch/hybrid_a_star.launch.py
+[25.608s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/hybrid_a_star.h
+[25.609s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/rs_path.h
+[25.610s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/state_node.h
+[25.611s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/type.h
+[25.611s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/package_run_dependencies/ros2_hybrid_a_star
+[25.612s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/parent_prefix_path/ros2_hybrid_a_star
+[25.612s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.sh
+[25.612s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.dsv
+[25.613s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.sh
+[25.613s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.dsv
+[25.614s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.bash
+[25.614s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.sh
+[25.614s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.zsh
+[25.614s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.dsv
+[25.615s] -- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.dsv
+[25.637s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/packages/ros2_hybrid_a_star
+[25.638s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig.cmake
+[25.638s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig-version.cmake
+[25.638s] -- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.xml
+[25.642s] Invoked command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star

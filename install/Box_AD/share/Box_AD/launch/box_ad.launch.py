@@ -151,10 +151,10 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             # 车辆尺寸（用于计算安全半径）
-            'vehicle_length': 4,
+            'vehicle_length': 3.5,
             'vehicle_width': 1.5,
-            'safety_margin': 0.1,
-            'obstacle_inflation': 0.3,
+            'safety_margin': 0.05,
+            'obstacle_inflation': 0.03,
             # 障碍物处理
             'min_obstacle_radius': 0.3,
             'obstacle_cluster_dist': 1.5,

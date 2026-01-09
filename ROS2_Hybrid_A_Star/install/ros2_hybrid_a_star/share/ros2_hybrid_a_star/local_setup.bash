@@ -1,0 +1,1 @@
+/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star/ament_cmake_environment_hooks/local_setup.bash

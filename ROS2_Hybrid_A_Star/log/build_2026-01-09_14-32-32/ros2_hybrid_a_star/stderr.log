@@ -1,0 +1,4 @@
+/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp: In function ‘void utm_to_latlon(double, double, int, char, double&, double&)’:
+/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp:74:12: warning: unused variable ‘x’ [-Wunused-variable]
+   74 |     double x = easting - 500000.0;
+      |            ^

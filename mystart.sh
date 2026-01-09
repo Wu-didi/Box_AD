@@ -50,3 +50,6 @@ ros2 run pcd2scan_slam_toolbox png_map_astar_node \
   -p origin_x:=-50.0 \
   -p origin_y:=-80.0 \
   -p frame_id:=map
+
+
+ros2 

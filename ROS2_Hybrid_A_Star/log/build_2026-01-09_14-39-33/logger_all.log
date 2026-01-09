@@ -1,0 +1,104 @@
+[4.584s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[4.584s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaed46be0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaed46be0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffaeb71670>)[0m
+[4.808s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[4.809s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[4.809s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[4.810s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[4.810s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[4.810s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[4.811s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star'
+[4.811s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.812s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[4.812s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[4.813s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[4.813s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[4.813s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[4.813s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[4.814s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[4.814s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[4.839s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage '.' with type 'ros.ament_cmake' and name 'ros2_hybrid_a_star'[0m
+[4.840s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[4.840s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[4.841s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[4.841s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[4.841s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[5.235s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[5.236s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[5.385s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 1 installed packages in /home/nvidia/vcii/pointpillar_ros_version/install[0m
+[5.460s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 273 installed packages in /opt/ros/foxy[0m
+[5.463s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[5.772s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_args' from command line to 'None'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_target' from command line to 'None'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_clean_cache' from command line to 'False'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_clean_first' from command line to 'False'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'cmake_force_configure' from command line to 'False'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'ament_cmake_args' from command line to 'None'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'catkin_cmake_args' from command line to 'None'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_hybrid_a_star' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.773s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'ros2_hybrid_a_star' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star', 'merge_install': False, 'path': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star', 'symlink_install': True, 'test_result_base': None}[0m
+[5.850s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[5.930s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[5.931s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star' with build type 'ament_cmake'
+[5.931s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star'
+[6.015s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.015s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.016s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[6.286s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star -- -j12 -l12[0m
+[6.535s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star -- -j12 -l12[0m
+[6.649s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star[0m
+[6.731s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(ros2_hybrid_a_star)
+[6.732s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star[0m
+[6.826s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star' for CMake module files
+[6.828s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star' for CMake config files
+[6.829s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_hybrid_a_star', 'cmake_prefix_path')
+[6.916s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.ps1'
+[6.918s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.dsv'
+[6.919s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.sh'
+[6.921s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib'
+[6.922s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/bin'
+[6.922s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/pkgconfig/ros2_hybrid_a_star.pc'
+[6.922s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/python3.8/site-packages'
+[6.923s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/bin'
+[7.003s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.ps1'
+[7.005s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.dsv'
+[7.007s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.sh'
+[7.008s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.bash'
+[7.009s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.zsh'
+[7.011s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/colcon-core/packages/ros2_hybrid_a_star)
+[7.181s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(ros2_hybrid_a_star)
+[7.268s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star' for CMake module files
+[7.270s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star' for CMake config files
+[7.271s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_hybrid_a_star', 'cmake_prefix_path')
+[7.355s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.ps1'
+[7.356s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.dsv'
+[7.357s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/hook/cmake_prefix_path.sh'
+[7.359s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib'
+[7.359s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/bin'
+[7.359s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/pkgconfig/ros2_hybrid_a_star.pc'
+[7.360s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/python3.8/site-packages'
+[7.360s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/bin'
+[7.445s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.ps1'
+[7.446s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.dsv'
+[7.447s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.sh'
+[7.448s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.bash'
+[7.449s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.zsh'
+[7.449s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/colcon-core/packages/ros2_hybrid_a_star)
+[7.450s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[7.451s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[7.452s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[7.452s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[7.587s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.587s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.587s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[7.623s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[7.709s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/local_setup.ps1'
+[7.711s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/_local_setup_util_ps1.py'
+[7.714s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/setup.ps1'
+[7.799s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/local_setup.sh'
+[7.801s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/_local_setup_util_sh.py'
+[7.802s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/setup.sh'
+[7.883s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/local_setup.bash'
+[7.884s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/setup.bash'
+[7.969s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/local_setup.zsh'
+[7.971s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/setup.zsh'

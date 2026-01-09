@@ -8,7 +8,6 @@ Box_AD/gps_imu_to_utm_pose_node.py
 Box_AD/imu_gps_logger.py
 Box_AD/imu_node.py
 Box_AD/follow_traj_wd/__init__.py
-Box_AD/follow_traj_wd/auto_drive_panel_node.py
 Box_AD/follow_traj_wd/can_node.py
 Box_AD/follow_traj_wd/can_use.py
 Box_AD/follow_traj_wd/follow_demo_2025.py
@@ -43,6 +42,7 @@ build/Box_AD/Box_AD.egg-info/requires.txt
 build/Box_AD/Box_AD.egg-info/top_level.txt
 build/Box_AD/Box_AD.egg-info/zip-safe
 launch/box_ad.launch.py
+launch/box_ad_ros2.launch.py
 resource/Box_AD
 test/test_copyright.py
 test/test_flake8.py

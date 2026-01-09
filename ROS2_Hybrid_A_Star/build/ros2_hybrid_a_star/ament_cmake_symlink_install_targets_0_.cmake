@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star/hybrid_a_star_node" "TARGETS" "hybrid_a_star_node" "DESTINATION" "lib/ros2_hybrid_a_star")

@@ -1,142 +1,121 @@
-[astar_planner_node-5] [起点] 位置: (68.07, 140.58), yaw=-151.6°, 四元数: [x=0.000, y=0.000, z=-0.969, w=0.245]
-[astar_planner_node-5] [终点] 位置: (62.21, 98.96), yaw=0.0°, 四元数: [x=0.000, y=0.000, z=0.000, w=1.000]
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(68.07, 140.58) -> 终点(62.21, 98.96)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=42.03m, 基础引导距离=12.61m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-98.0°, diff=53.6°
-[astar_planner_node-5] [添加起点引导点1] (54.33, 133.16), 距离=15.61m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=0.0°, direct_yaw=-98.0°, diff=98.0°
-[astar_planner_node-5] [添加终点引导点-缩短] (49.55, 98.96), 距离=12.67m
-[astar_planner_node-5] [路点序列] 起点 + 2 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1405,680) -> (1331,543)
-[astar_planner_node-5] [A* 规划段 2] (1331,543) -> (989,495)
-[astar_planner_node-5] [A* 规划段 3] (989,495) -> (989,622)
-[astar_planner_node-5] [A* 规划完成] 点数=4, 引导点=2
-[astar_planner_node-5] [平滑前] 路径点数=4
-[astar_planner_node-5]   点0: (68.05, 140.55)
-[astar_planner_node-5]   点1: (54.35, 133.15)
-[astar_planner_node-5]   点2: (49.55, 98.95)
-[astar_planner_node-5]   点3: (62.25, 98.95)
-[astar_planner_node-5] [重采样后] 路径点数=316
-[astar_planner_node-5] [平滑后] 路径点数=2570
-[astar_planner_node-5] [发布路径] /global_path (map 坐标)，点数=2570
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(68.07, 140.58) -> 终点(62.21, 98.96)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=42.03m, 基础引导距离=12.61m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-98.0°, diff=53.6°
-[astar_planner_node-5] [添加起点引导点1] (54.33, 133.16), 距离=15.61m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=0.0°, direct_yaw=-98.0°, diff=98.0°
-[astar_planner_node-5] [添加终点引导点-缩短] (49.55, 98.96), 距离=12.67m
-[astar_planner_node-5] [路点序列] 起点 + 2 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1405,680) -> (1331,543)
-[astar_planner_node-5] [A* 规划段 2] (1331,543) -> (989,495)
-[astar_planner_node-5] [A* 规划段 3] (989,495) -> (989,622)
-[astar_planner_node-5] [A* 规划完成] 点数=4, 引导点=2
-[astar_planner_node-5] [平滑前] 路径点数=4
-[astar_planner_node-5]   点0: (68.05, 140.55)
-[astar_planner_node-5]   点1: (54.35, 133.15)
-[astar_planner_node-5]   点2: (49.55, 98.95)
-[astar_planner_node-5]   点3: (62.25, 98.95)
-[astar_planner_node-5] [重采样后] 路径点数=316
-[astar_planner_node-5] [平滑后] 路径点数=2570
-[astar_planner_node-5] [发布路径] /global_path (map 坐标)，点数=2570
-[astar_planner_node-5] [起点] 位置: (73.11, 134.76), yaw=-151.6°, 四元数: [x=0.000, y=0.000, z=-0.969, w=0.245]
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(73.11, 134.76) -> 终点(62.21, 98.96)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=37.42m, 基础引导距离=11.23m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-106.9°, diff=44.7°
-[astar_planner_node-5] [添加起点引导点1] (61.27, 128.36), 距离=13.45m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=0.0°, direct_yaw=-106.9°, diff=106.9°
-[astar_planner_node-5] [添加终点引导点1] (47.43, 118.92), 距离=24.84m, 方向=-53.5°
-[astar_planner_node-5] [添加终点引导点-缩短] (50.62, 98.96), 距离=11.59m
-[astar_planner_node-5] [路点序列] 起点 + 3 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1347,731) -> (1283,612)
-[astar_planner_node-5] [A* 规划段 2] (1283,612) -> (1189,474)
-[astar_planner_node-5] [A* 规划段 3] (1189,474) -> (989,506)
-[astar_planner_node-5] [A* 规划段 4] (989,506) -> (989,622)
-[astar_planner_node-5] [A* 规划完成] 点数=7, 引导点=3
-[astar_planner_node-5] [平滑前] 路径点数=7
-[astar_planner_node-5]   点0: (73.15, 134.75)
-[astar_planner_node-5]   点1: (61.25, 128.35)
-[astar_planner_node-5]   点2: (47.45, 118.95)
-[astar_planner_node-5]   点3: (47.75, 116.45)
-[astar_planner_node-5]   点4: (48.35, 113.65)
-[astar_planner_node-5]   点5: (50.65, 98.95)
-[astar_planner_node-5]   点6: (62.25, 98.95)
-[astar_planner_node-5] [重采样后] 路径点数=312
-[astar_planner_node-5] [平滑后] 路径点数=1556
-[astar_planner_node-5] [发布路径] /global_path (map 坐标)，点数=1556
-[astar_planner_node-5] [终点] 位置: (64.06, 97.11), yaw=-45.8°, 四元数: [x=0.000, y=0.000, z=-0.389, w=0.921]
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(73.11, 134.76) -> 终点(64.06, 97.11)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=38.72m, 基础引导距离=11.62m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-103.5°, diff=48.1°
-[astar_planner_node-5] [添加起点引导点1] (60.71, 128.06), 距离=14.10m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=-45.8°, direct_yaw=-103.5°, diff=57.7°
-[astar_planner_node-5] [添加终点引导点2] (53.90, 107.58), 距离=14.59m
-[astar_planner_node-5] [路点序列] 起点 + 2 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1347,731) -> (1280,607)
-[astar_planner_node-5] [A* 规划段 2] (1280,607) -> (1075,538)
-[astar_planner_node-5] [A* 规划段 3] (1075,538) -> (971,640)
-[astar_planner_node-5] [A* 规划完成] 点数=5, 引导点=2
-[astar_planner_node-5] [平滑前] 路径点数=5
-[astar_planner_node-5]   点0: (73.15, 134.75)
-[astar_planner_node-5]   点1: (60.75, 128.05)
-[astar_planner_node-5]   点2: (56.55, 113.15)
-[astar_planner_node-5]   点3: (53.85, 107.55)
-[astar_planner_node-5]   点4: (64.05, 97.15)
-[astar_planner_node-5] [重采样后] 路径点数=253
-[astar_planner_node-5] [平滑后] 路径点数=2219
-[astar_planner_node-5] [发布路径] /global_path (map 坐标)，点数=2219
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(73.11, 134.76) -> 终点(64.06, 97.11)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=38.72m, 基础引导距离=11.62m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-103.5°, diff=48.1°
-[astar_planner_node-5] [添加起点引导点1] (60.71, 128.06), 距离=14.10m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=-45.8°, direct_yaw=-103.5°, diff=57.7°
-[astar_planner_node-5] [添加终点引导点2] (53.90, 107.58), 距离=14.59m
-[astar_planner_node-5] [路点序列] 起点 + 2 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1347,731) -> (1280,607)
-[astar_planner_node-5] [A* 规划段 2] (1280,607) -> (1075,538)
-[astar_planner_node-5] [A* 规划段 3] (1075,538) -> (971,640)
-[astar_planner_node-5] [A* 规划完成] 点数=5, 引导点=2
-[astar_planner_node-5] [平滑前] 路径点数=5
-[astar_planner_node-5]   点0: (73.15, 134.75)
-[astar_planner_node-5]   点1: (60.75, 128.05)
-[astar_planner_node-5]   点2: (56.55, 113.15)
-[astar_planner_node-5]   点3: (53.85, 107.55)
-[astar_planner_node-5]   点4: (64.05, 97.15)
-[astar_planner_node-5] [重采样后] 路径点数=253
-[astar_planner_node-5] [平滑后] 路径点数=2219
-[astar_planner_node-5] [发布路径] /global_path (map 坐标)，点数=2219
-[astar_planner_node-5] [起点] 位置: (74.89, 138.94), yaw=-151.6°, 四元数: [x=0.000, y=0.000, z=-0.969, w=0.245]
-[astar_planner_node-5] 
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [开始规划] 起点(74.89, 138.94) -> 终点(64.06, 97.11)
-[astar_planner_node-5] ============================================================
-[astar_planner_node-5] [引导点配置] 总距离=43.20m, 基础引导距离=12.96m
-[astar_planner_node-5] [起点朝向分析] start_yaw=-151.6°, direct_yaw=-104.5°, diff=47.1°
-[astar_planner_node-5] [添加起点引导点1] (61.10, 131.49), 距离=15.67m
-[astar_planner_node-5] [终点朝向分析] goal_yaw=-45.8°, direct_yaw=-104.5°, diff=58.7°
-[astar_planner_node-5] [添加终点引导点2] (52.68, 108.84), 距离=16.34m
-[astar_planner_node-5] [路点序列] 起点 + 2 个引导点 + 终点
-[astar_planner_node-5] [A* 规划段 1] (1389,748) -> (1314,611)
-[astar_planner_node-5] [A* 规划段 2] (1314,611) -> (1088,526)
-[astar_planner_node-5] [A* 规划段 3] (1088,526) -> (971,640)
-[astar_planner_node-5] [A* 规划完成] 点数=5, 引导点=2
-[astar_planner_node-5] [平滑前] 路径点数=5
-[astar_planner_node-5]   点0: (74.85, 138.95)
-[astar_planner_node-5]   点1: (61.15, 131.45)
-[astar_planner_node-5]   点2: (56.55, 113.15)
-[astar_planner_node-5]   点3: (52.65, 108.85)
-[astar_planner_node-5]   点4: (64.05, 97.15)
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-01-09-15-04-10-035436-EAORA07A-174655
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: Box_AD 自动驾驶栈启动中 (使用 ROS2 Hybrid A* 全局规划)...
+Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<LaunchService._process_one_event() done, defined at /opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py:226> exception=PackageNotFoundError("package 'ros2_hybrid_a_star' not found, searching: ['/home/nvidia/vcii/wudi/Box_AD/install/Box_AD', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection', '/opt/ros/foxy']")>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/packages.py", line 50, in get_package_prefix
+    content, package_prefix = get_resource('packages', package_name)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/resources.py", line 48, in get_resource
+    raise LookupError(
+LookupError: Could not find the resource 'ros2_hybrid_a_star' of type 'packages'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 228, in _process_one_event
+    await self.__process_event(next_event)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 248, in __process_event
+    visit_all_entities_and_collect_futures(entity, self.__context))
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  [Previous line repeated 1 more time]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 38, in visit_all_entities_and_collect_futures
+    sub_entities = entity.visit(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/action.py", line 108, in visit
+    return self.execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/actions/node.py", line 453, in execute
+    ret = super().execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 823, in execute
+    self.__expand_substitutions(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 668, in __expand_substitutions
+    cmd = [perform_substitutions(context, x) for x in self.__cmd]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 668, in <listcomp>
+    cmd = [perform_substitutions(context, x) for x in self.__cmd]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/perform_substitutions_impl.py", line 26, in perform_substitutions
+    return ''.join([context.perform_substitution(sub) for sub in subs])
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/perform_substitutions_impl.py", line 26, in <listcomp>
+    return ''.join([context.perform_substitution(sub) for sub in subs])
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_context.py", line 232, in perform_substitution
+    return substitution.perform(self)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/executable_in_package.py", line 76, in perform
+    package_prefix = super().perform(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/find_package.py", line 79, in perform
+    result = self.find(package)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/find_package.py", line 96, in find
+    return get_package_prefix(package_name)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/packages.py", line 52, in get_package_prefix
+    raise PackageNotFoundError(
+ament_index_python.packages.PackageNotFoundError: "package 'ros2_hybrid_a_star' not found, searching: ['/home/nvidia/vcii/wudi/Box_AD/install/Box_AD', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection', '/opt/ros/foxy']"
+Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<LaunchService._process_one_event() done, defined at /opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py:226> exception=RuntimeError('Signal event received before subprocess transport available.')>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 228, in _process_one_event
+    await self.__process_event(next_event)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 248, in __process_event
+    visit_all_entities_and_collect_futures(entity, self.__context))
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 38, in visit_all_entities_and_collect_futures
+    sub_entities = entity.visit(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/action.py", line 108, in visit
+    return self.execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/opaque_function.py", line 75, in execute
+    return self.__function(context, *self.__args, **self.__kwargs)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 443, in __on_signal_process_event
+    raise RuntimeError('Signal event received before subprocess transport available.')
+RuntimeError: Signal event received before subprocess transport available.
+[INFO] [publish_imu-1]: process started with pid [174693]
+[INFO] [gps_imu_to_utm_pose-2]: process started with pid [174695]
+[INFO] [png_map_publisher-3]: process started with pid [174697]
+[INFO] [fast_lidar_obstacle_detector-4]: process started with pid [174699]
+[INFO] [png_map_publisher-3]: sending signal 'SIGINT' to process[png_map_publisher-3]
+[INFO] [gps_imu_to_utm_pose-2]: sending signal 'SIGINT' to process[gps_imu_to_utm_pose-2]
+[INFO] [publish_imu-1]: sending signal 'SIGINT' to process[publish_imu-1]
+[ERROR] [png_map_publisher-3]: process has died [pid 174697, exit code -2, cmd '/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD/png_map_publisher --ros-args -r __node:=png_map_publisher --params-file /tmp/launch_params_bqh3ntf2'].
+[ERROR] [gps_imu_to_utm_pose-2]: process has died [pid 174695, exit code 1, cmd '/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD/gps_imu_to_utm_pose --ros-args -r __node:=gps_imu_to_utm_pose --params-file /tmp/launch_params_t46awsl2'].
+[ERROR] [publish_imu-1]: process has died [pid 174693, exit code 1, cmd '/home/nvidia/vcii/wudi/Box_AD/install/Box_AD/lib/Box_AD/publish_imu --ros-args -r __node:=publish_imu'].
+[gps_imu_to_utm_pose-2] Fatal Python error: init_import_size: Failed to import the site module
+[gps_imu_to_utm_pose-2] Python runtime state: initialized
+[gps_imu_to_utm_pose-2] Traceback (most recent call last):
+[gps_imu_to_utm_pose-2]   File "/usr/lib/python3.8/site.py", line 79, in <module>
+[gps_imu_to_utm_pose-2]     import os
+[gps_imu_to_utm_pose-2]   File "/usr/lib/python3.8/os.py", line 29, in <module>
+[gps_imu_to_utm_pose-2]     from _collections_abc import _check_methods
+[gps_imu_to_utm_pose-2]   File "/usr/lib/python3.8/_collections_abc.py", line 856, in <module>
+[gps_imu_to_utm_pose-2]     class Sequence(Reversible, Collection):
+[gps_imu_to_utm_pose-2]   File "/usr/lib/python3.8/_collections_abc.py", line 913, in Sequence
+[gps_imu_to_utm_pose-2]     def count(self, value):
+[gps_imu_to_utm_pose-2] KeyboardInterrupt
+[publish_imu-1] Fatal Python error: init_import_size: Failed to import the site module
+[publish_imu-1] Python runtime state: initialized
+[publish_imu-1] Traceback (most recent call last):
+[publish_imu-1]   File "/usr/lib/python3.8/site.py", line 597, in <module>
+[publish_imu-1]     main()
+[publish_imu-1]   File "/usr/lib/python3.8/site.py", line 583, in main
+[publish_imu-1]     known_paths = addusersitepackages(known_paths)
+[publish_imu-1]   File "/usr/lib/python3.8/site.py", line 322, in addusersitepackages
+[publish_imu-1]     addsitedir(user_site, known_paths)
+[publish_imu-1]   File "/usr/lib/python3.8/site.py", line 204, in addsitedir
+[publish_imu-1]     sitedir, sitedircase = makepath(sitedir)
+[publish_imu-1]   File "/usr/lib/python3.8/site.py", line 98, in makepath
+[publish_imu-1]     dir = os.path.join(*paths)
+[publish_imu-1]   File "/usr/lib/python3.8/posixpath.py", line 82, in join
+[publish_imu-1]     for b in map(os.fspath, p):
+[publish_imu-1] KeyboardInterrupt
+[fast_lidar_obstacle_detector-4] [INFO] [1767942250.908524279] [fast_lidar_obstacle_detector]: FastLidarObstacleDetectorNode started (optimized). Subscribing /rslidar_points_prev, /rslidar_points_left, /rslidar_points_right, /rslidar_points_top, /rslidar_points_back, publishing /fast_obstacles
+[fast_lidar_obstacle_detector-4] [INFO] [1767942250.977627333] [fast_lidar_obstacle_detector]: 检测到 347 个障碍物 (前:0, 左:0, 右:0, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.005360741] [fast_lidar_obstacle_detector]: 检测到 392 个障碍物 (前:0, 左:0, 右:45, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.023606030] [fast_lidar_obstacle_detector]: 检测到 701 个障碍物 (前:309, 左:0, 右:45, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.046481938] [fast_lidar_obstacle_detector]: 检测到 832 个障碍物 (前:309, 左:131, 右:45, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.071012000] [fast_lidar_obstacle_detector]: 检测到 833 个障碍物 (前:310, 左:131, 右:45, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.096107504] [fast_lidar_obstacle_detector]: 检测到 837 个障碍物 (前:310, 左:135, 右:45, 顶:347, 后:0)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.125081335] [fast_lidar_obstacle_detector]: 检测到 849 个障碍物 (前:310, 左:135, 右:45, 顶:347, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.152687670] [fast_lidar_obstacle_detector]: 检测到 843 个障碍物 (前:304, 左:135, 右:45, 顶:347, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.179287312] [fast_lidar_obstacle_detector]: 检测到 837 个障碍物 (前:304, 左:129, 右:45, 顶:347, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.206705102] [fast_lidar_obstacle_detector]: 检测到 838 个障碍物 (前:304, 左:129, 右:46, 顶:347, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.232834244] [fast_lidar_obstacle_detector]: 检测到 837 个障碍物 (前:304, 左:129, 右:46, 顶:346, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.259330781] [fast_lidar_obstacle_detector]: 检测到 837 个障碍物 (前:304, 左:129, 右:46, 顶:346, 后:12)
+[fast_lidar_obstacle_detector-4] [INFO] [1767942251.28516c

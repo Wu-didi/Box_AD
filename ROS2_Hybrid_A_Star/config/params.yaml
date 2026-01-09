@@ -1,0 +1,28 @@
+# ROS2 Hybrid A* 参数配置文件
+# 注意：本配置已禁用倒车功能（车辆不支持倒车）
+
+hybrid_a_star_node:
+  ros__parameters:
+    # 车辆参数：车长4.53m, 车宽1.9m, 轴距2.85m, 最大转向角60度
+    vehicle_length: 4.53
+    vehicle_width: 1.9
+    rear_axle_dist: 1.3
+    wheelbase: 2.85
+    max_steer_angle: 60.0
+
+    # 算法参数
+    segment_length: 1.6
+    segment_length_discrete_num: 8
+    steering_angle_discrete_num: 1
+    steering_penalty: 1.05
+    reversing_penalty: 2.0  # 未使用（倒车功能已禁用）
+    steering_change_penalty: 1.5
+    shot_distance: 10.0  # 未使用（Reeds-Shepp 路径已禁用）
+    state_grid_resolution: 1.0
+    map_grid_resolution: 0.1
+
+    # UTM 参数
+    map_yaml_path: "/home/nvidia/vcii/wudi/Box_AD/maps/map.yaml"
+    utm_zone: 50
+    utm_zone_letter: "N"
+

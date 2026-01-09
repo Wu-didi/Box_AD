@@ -1,0 +1,305 @@
+[0.000000] (-) TimerEvent: {}
+[0.000571] (ros2_hybrid_a_star) JobQueued: {'identifier': 'ros2_hybrid_a_star', 'dependencies': OrderedDict()}
+[0.001517] (ros2_hybrid_a_star) JobStarted: {'identifier': 'ros2_hybrid_a_star'}
+[0.103651] (-) TimerEvent: {}
+[0.204017] (-) TimerEvent: {}
+[0.304586] (-) TimerEvent: {}
+[0.330103] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'cmake'}
+[0.332108] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'build'}
+[0.333501] (ros2_hybrid_a_star) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', '--', '-j12', '-l12'], 'cwd': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '192.168.1.69 33834 22'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('LC_TIME', 'zh_CN.UTF-8'), ('DISABLE_TELEMETRY', '1'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/helpers/browser.sh'), ('CLAUDE_CODE_MAX_OUTPUT_TOKENS', '20000'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia/vcii/wudi/Box_AD'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('NVM_BIN', '/home/nvidia/.nvm/versions/node/v24.12.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-80ae6593-1f02-4f32-9acf-3bbd61d6dbef.sock'), ('NVM_INC', '/home/nvidia/.nvm/versions/node/v24.12.0/include/node'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/nvidia/.nvm'), ('COLCON_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nvidia'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421524312429'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Concord'), ('CLAUDE_CODE_SSE_PORT', '17215'), ('XDG_SESSION_CLASS', 'user'), ('ANTHROPIC_BASE_URL', 'https://co.yes.vg'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-11.4/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/remote-cli:/home/nvidia/.local/bin:/home/nvidia/.nvm/versions/node/v24.12.0/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/nvidia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISABLE_ERROR_REPORTING', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8fc3cd4a38e52535.txt'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/nvidia/.vscode-server/data/User/workspaceStorage/ca069b7bb03b0e568510cf7b5f4669bc/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d7e44eae8c.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('ANTHROPIC_AUTH_TOKEN', 'cr_3cead773e57deb581eaba88d758e8c0c6150f8bb5e4ae82e7e5755748aedf50b'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('MAX_THINKING_TOKENS', '12000'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.69 33834 192.168.1.102 22'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.404840] (-) TimerEvent: {}
+[0.456937] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 60%] Built target hybrid_a_star_lib\n'}
+[0.504946] (-) TimerEvent: {}
+[0.541842] (ros2_hybrid_a_star) StdoutLine: {'line': b'Scanning dependencies of target hybrid_a_star_node\n'}
+[0.602366] (ros2_hybrid_a_star) StdoutLine: {'line': b'[ 80%] Building CXX object CMakeFiles/hybrid_a_star_node.dir/src/hybrid_a_star_node.cpp.o\n'}
+[0.605976] (-) TimerEvent: {}
+[0.706216] (-) TimerEvent: {}
+[0.806603] (-) TimerEvent: {}
+[0.906988] (-) TimerEvent: {}
+[1.007595] (-) TimerEvent: {}
+[1.107960] (-) TimerEvent: {}
+[1.208349] (-) TimerEvent: {}
+[1.308708] (-) TimerEvent: {}
+[1.409023] (-) TimerEvent: {}
+[1.509399] (-) TimerEvent: {}
+[1.609763] (-) TimerEvent: {}
+[1.710119] (-) TimerEvent: {}
+[1.810471] (-) TimerEvent: {}
+[1.910836] (-) TimerEvent: {}
+[2.011246] (-) TimerEvent: {}
+[2.111636] (-) TimerEvent: {}
+[2.212060] (-) TimerEvent: {}
+[2.312422] (-) TimerEvent: {}
+[2.412796] (-) TimerEvent: {}
+[2.513213] (-) TimerEvent: {}
+[2.613631] (-) TimerEvent: {}
+[2.714776] (-) TimerEvent: {}
+[2.815140] (-) TimerEvent: {}
+[2.915515] (-) TimerEvent: {}
+[3.015914] (-) TimerEvent: {}
+[3.116339] (-) TimerEvent: {}
+[3.216736] (-) TimerEvent: {}
+[3.317138] (-) TimerEvent: {}
+[3.417521] (-) TimerEvent: {}
+[3.517914] (-) TimerEvent: {}
+[3.618316] (-) TimerEvent: {}
+[3.718718] (-) TimerEvent: {}
+[3.819580] (-) TimerEvent: {}
+[3.919992] (-) TimerEvent: {}
+[4.020430] (-) TimerEvent: {}
+[4.120894] (-) TimerEvent: {}
+[4.221273] (-) TimerEvent: {}
+[4.321665] (-) TimerEvent: {}
+[4.422035] (-) TimerEvent: {}
+[4.522437] (-) TimerEvent: {}
+[4.622806] (-) TimerEvent: {}
+[4.723154] (-) TimerEvent: {}
+[4.823519] (-) TimerEvent: {}
+[4.923896] (-) TimerEvent: {}
+[5.024276] (-) TimerEvent: {}
+[5.124655] (-) TimerEvent: {}
+[5.225047] (-) TimerEvent: {}
+[5.325429] (-) TimerEvent: {}
+[5.425818] (-) TimerEvent: {}
+[5.526472] (-) TimerEvent: {}
+[5.626865] (-) TimerEvent: {}
+[5.727235] (-) TimerEvent: {}
+[5.757687] (ros2_hybrid_a_star) StderrLine: {'line': b'/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp: In function \xe2\x80\x98void utm_to_latlon(double, double, int, char, double&, double&)\xe2\x80\x99:\n'}
+[5.758369] (ros2_hybrid_a_star) StderrLine: {'line': b'/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/src/hybrid_a_star_node.cpp:74:12: warning: unused variable \xe2\x80\x98x\xe2\x80\x99 [-Wunused-variable]\n'}
+[5.758594] (ros2_hybrid_a_star) StderrLine: {'line': b'   74 |     double x = easting - 500000.0;\n'}
+[5.758752] (ros2_hybrid_a_star) StderrLine: {'line': b'      |            ^\n'}
+[5.827544] (-) TimerEvent: {}
+[5.927961] (-) TimerEvent: {}
+[6.028369] (-) TimerEvent: {}
+[6.131277] (-) TimerEvent: {}
+[6.231634] (-) TimerEvent: {}
+[6.331989] (-) TimerEvent: {}
+[6.432387] (-) TimerEvent: {}
+[6.532828] (-) TimerEvent: {}
+[6.633255] (-) TimerEvent: {}
+[6.733690] (-) TimerEvent: {}
+[6.834127] (-) TimerEvent: {}
+[6.934520] (-) TimerEvent: {}
+[7.034902] (-) TimerEvent: {}
+[7.135293] (-) TimerEvent: {}
+[7.235724] (-) TimerEvent: {}
+[7.336268] (-) TimerEvent: {}
+[7.436890] (-) TimerEvent: {}
+[7.537372] (-) TimerEvent: {}
+[7.637820] (-) TimerEvent: {}
+[7.738249] (-) TimerEvent: {}
+[7.838623] (-) TimerEvent: {}
+[7.939027] (-) TimerEvent: {}
+[8.039472] (-) TimerEvent: {}
+[8.139915] (-) TimerEvent: {}
+[8.240337] (-) TimerEvent: {}
+[8.342507] (-) TimerEvent: {}
+[8.442833] (-) TimerEvent: {}
+[8.543244] (-) TimerEvent: {}
+[8.643783] (-) TimerEvent: {}
+[8.744932] (-) TimerEvent: {}
+[8.845518] (-) TimerEvent: {}
+[8.945906] (-) TimerEvent: {}
+[9.046323] (-) TimerEvent: {}
+[9.146769] (-) TimerEvent: {}
+[9.247146] (-) TimerEvent: {}
+[9.347525] (-) TimerEvent: {}
+[9.447891] (-) TimerEvent: {}
+[9.548258] (-) TimerEvent: {}
+[9.648619] (-) TimerEvent: {}
+[9.748999] (-) TimerEvent: {}
+[9.849540] (-) TimerEvent: {}
+[9.950051] (-) TimerEvent: {}
+[10.050986] (-) TimerEvent: {}
+[10.151358] (-) TimerEvent: {}
+[10.251725] (-) TimerEvent: {}
+[10.352203] (-) TimerEvent: {}
+[10.452571] (-) TimerEvent: {}
+[10.552973] (-) TimerEvent: {}
+[10.653341] (-) TimerEvent: {}
+[10.754217] (-) TimerEvent: {}
+[10.854647] (-) TimerEvent: {}
+[10.955386] (-) TimerEvent: {}
+[11.055807] (-) TimerEvent: {}
+[11.156550] (-) TimerEvent: {}
+[11.256888] (-) TimerEvent: {}
+[11.357497] (-) TimerEvent: {}
+[11.457977] (-) TimerEvent: {}
+[11.558482] (-) TimerEvent: {}
+[11.658899] (-) TimerEvent: {}
+[11.759324] (-) TimerEvent: {}
+[11.859722] (-) TimerEvent: {}
+[11.960433] (-) TimerEvent: {}
+[12.060829] (-) TimerEvent: {}
+[12.161225] (-) TimerEvent: {}
+[12.262457] (-) TimerEvent: {}
+[12.362821] (-) TimerEvent: {}
+[12.463216] (-) TimerEvent: {}
+[12.563665] (-) TimerEvent: {}
+[12.664072] (-) TimerEvent: {}
+[12.764511] (-) TimerEvent: {}
+[12.865010] (-) TimerEvent: {}
+[12.965430] (-) TimerEvent: {}
+[13.065875] (-) TimerEvent: {}
+[13.166297] (-) TimerEvent: {}
+[13.266740] (-) TimerEvent: {}
+[13.367136] (-) TimerEvent: {}
+[13.467520] (-) TimerEvent: {}
+[13.567890] (-) TimerEvent: {}
+[13.668507] (-) TimerEvent: {}
+[13.768857] (-) TimerEvent: {}
+[13.869235] (-) TimerEvent: {}
+[13.969621] (-) TimerEvent: {}
+[14.070048] (-) TimerEvent: {}
+[14.170690] (-) TimerEvent: {}
+[14.271171] (-) TimerEvent: {}
+[14.372288] (-) TimerEvent: {}
+[14.473409] (-) TimerEvent: {}
+[14.573868] (-) TimerEvent: {}
+[14.674269] (-) TimerEvent: {}
+[14.774662] (-) TimerEvent: {}
+[14.875102] (-) TimerEvent: {}
+[14.975512] (-) TimerEvent: {}
+[15.075917] (-) TimerEvent: {}
+[15.176325] (-) TimerEvent: {}
+[15.276732] (-) TimerEvent: {}
+[15.377067] (-) TimerEvent: {}
+[15.477405] (-) TimerEvent: {}
+[15.577773] (-) TimerEvent: {}
+[15.678163] (-) TimerEvent: {}
+[15.778609] (-) TimerEvent: {}
+[15.879042] (-) TimerEvent: {}
+[15.979451] (-) TimerEvent: {}
+[16.079878] (-) TimerEvent: {}
+[16.180277] (-) TimerEvent: {}
+[16.280661] (-) TimerEvent: {}
+[16.381161] (-) TimerEvent: {}
+[16.484301] (-) TimerEvent: {}
+[16.584842] (-) TimerEvent: {}
+[16.685375] (-) TimerEvent: {}
+[16.785791] (-) TimerEvent: {}
+[16.886247] (-) TimerEvent: {}
+[16.986659] (-) TimerEvent: {}
+[17.087077] (-) TimerEvent: {}
+[17.187538] (-) TimerEvent: {}
+[17.288025] (-) TimerEvent: {}
+[17.388489] (-) TimerEvent: {}
+[17.488978] (-) TimerEvent: {}
+[17.589474] (-) TimerEvent: {}
+[17.690289] (-) TimerEvent: {}
+[17.790682] (-) TimerEvent: {}
+[17.891075] (-) TimerEvent: {}
+[17.991492] (-) TimerEvent: {}
+[18.091884] (-) TimerEvent: {}
+[18.192300] (-) TimerEvent: {}
+[18.292773] (-) TimerEvent: {}
+[18.393249] (-) TimerEvent: {}
+[18.493722] (-) TimerEvent: {}
+[18.594227] (-) TimerEvent: {}
+[18.694734] (-) TimerEvent: {}
+[18.795231] (-) TimerEvent: {}
+[18.895705] (-) TimerEvent: {}
+[18.996217] (-) TimerEvent: {}
+[19.096754] (-) TimerEvent: {}
+[19.197268] (-) TimerEvent: {}
+[19.297904] (-) TimerEvent: {}
+[19.398436] (-) TimerEvent: {}
+[19.498949] (-) TimerEvent: {}
+[19.599470] (-) TimerEvent: {}
+[19.699966] (-) TimerEvent: {}
+[19.800436] (-) TimerEvent: {}
+[19.900882] (-) TimerEvent: {}
+[20.001316] (-) TimerEvent: {}
+[20.101862] (-) TimerEvent: {}
+[20.202370] (-) TimerEvent: {}
+[20.302848] (-) TimerEvent: {}
+[20.403262] (-) TimerEvent: {}
+[20.503700] (-) TimerEvent: {}
+[20.604132] (-) TimerEvent: {}
+[20.704593] (-) TimerEvent: {}
+[20.805011] (-) TimerEvent: {}
+[20.905468] (-) TimerEvent: {}
+[21.005904] (-) TimerEvent: {}
+[21.106328] (-) TimerEvent: {}
+[21.206751] (-) TimerEvent: {}
+[21.307160] (-) TimerEvent: {}
+[21.407586] (-) TimerEvent: {}
+[21.508012] (-) TimerEvent: {}
+[21.608536] (-) TimerEvent: {}
+[21.709391] (-) TimerEvent: {}
+[21.809865] (-) TimerEvent: {}
+[21.910361] (-) TimerEvent: {}
+[22.010890] (-) TimerEvent: {}
+[22.111362] (-) TimerEvent: {}
+[22.211843] (-) TimerEvent: {}
+[22.312296] (-) TimerEvent: {}
+[22.412707] (-) TimerEvent: {}
+[22.513130] (-) TimerEvent: {}
+[22.613562] (-) TimerEvent: {}
+[22.714019] (-) TimerEvent: {}
+[22.814552] (-) TimerEvent: {}
+[22.914987] (-) TimerEvent: {}
+[23.015457] (-) TimerEvent: {}
+[23.115899] (-) TimerEvent: {}
+[23.216318] (-) TimerEvent: {}
+[23.316703] (-) TimerEvent: {}
+[23.417135] (-) TimerEvent: {}
+[23.517568] (-) TimerEvent: {}
+[23.617992] (-) TimerEvent: {}
+[23.718591] (-) TimerEvent: {}
+[23.818992] (-) TimerEvent: {}
+[23.919384] (-) TimerEvent: {}
+[24.019816] (-) TimerEvent: {}
+[24.120264] (-) TimerEvent: {}
+[24.220720] (-) TimerEvent: {}
+[24.321158] (-) TimerEvent: {}
+[24.399963] (ros2_hybrid_a_star) StdoutLine: {'line': b'[100%] Linking CXX executable hybrid_a_star_node\n'}
+[24.421329] (-) TimerEvent: {}
+[24.521752] (-) TimerEvent: {}
+[24.622244] (-) TimerEvent: {}
+[24.722753] (-) TimerEvent: {}
+[24.823200] (-) TimerEvent: {}
+[24.923627] (-) TimerEvent: {}
+[25.024040] (-) TimerEvent: {}
+[25.124435] (-) TimerEvent: {}
+[25.224848] (-) TimerEvent: {}
+[25.325258] (-) TimerEvent: {}
+[25.425645] (-) TimerEvent: {}
+[25.457641] (ros2_hybrid_a_star) StdoutLine: {'line': b'[100%] Built target hybrid_a_star_node\n'}
+[25.481206] (ros2_hybrid_a_star) CommandEnded: {'returncode': 0}
+[25.525857] (-) TimerEvent: {}
+[25.544151] (ros2_hybrid_a_star) JobProgress: {'identifier': 'ros2_hybrid_a_star', 'progress': 'install'}
+[25.577787] (ros2_hybrid_a_star) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'], 'cwd': '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '192.168.1.69 33834 22'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('LC_TIME', 'zh_CN.UTF-8'), ('DISABLE_TELEMETRY', '1'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/helpers/browser.sh'), ('CLAUDE_CODE_MAX_OUTPUT_TOKENS', '20000'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia/vcii/wudi/Box_AD'), ('TERM_PROGRAM_VERSION', '1.105.1'), ('NVM_BIN', '/home/nvidia/.nvm/versions/node/v24.12.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-80ae6593-1f02-4f32-9acf-3bbd61d6dbef.sock'), ('NVM_INC', '/home/nvidia/.nvm/versions/node/v24.12.0/include/node'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/nvidia/.nvm'), ('COLCON_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nvidia'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421524312429'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Concord'), ('CLAUDE_CODE_SSE_PORT', '17215'), ('XDG_SESSION_CLASS', 'user'), ('ANTHROPIC_BASE_URL', 'https://co.yes.vg'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-11.4/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7d842fb85a0275a4a8e4d7e040d2625abbf7f084/server/bin/remote-cli:/home/nvidia/.local/bin:/home/nvidia/.nvm/versions/node/v24.12.0/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/nvidia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISABLE_ERROR_REPORTING', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/nvidia/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8fc3cd4a38e52535.txt'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LD_PRELOAD', '/usr/lib/aarch64-linux-gnu/libgomp.so.1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/nvidia/.vscode-server/data/User/workspaceStorage/ca069b7bb03b0e568510cf7b5f4669bc/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d7e44eae8c.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('ANTHROPIC_AUTH_TOKEN', 'cr_3cead773e57deb581eaba88d758e8c0c6150f8bb5e4ae82e7e5755748aedf50b'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('MAX_THINKING_TOKENS', '12000'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/build/ros2_hybrid_a_star'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.69 33834 192.168.1.102 22'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC', '1'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/nvidia/vcii/pointpillar_ros_version/install/lidar_detection:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[25.606337] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.607335] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[25.607734] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/lib/ros2_hybrid_a_star/hybrid_a_star_node\n'}
+[25.608391] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/launch/hybrid_a_star.launch.py\n'}
+[25.609219] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/hybrid_a_star.h\n'}
+[25.610207] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/rs_path.h\n'}
+[25.610571] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/state_node.h\n'}
+[25.611719] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/include//hybrid_a_star/type.h\n'}
+[25.612412] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/package_run_dependencies/ros2_hybrid_a_star\n'}
+[25.613087] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/parent_prefix_path/ros2_hybrid_a_star\n'}
+[25.613406] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.sh\n'}
+[25.613889] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/ament_prefix_path.dsv\n'}
+[25.614231] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.sh\n'}
+[25.614649] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/environment/path.dsv\n'}
+[25.615158] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.bash\n'}
+[25.615341] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.sh\n'}
+[25.615710] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.zsh\n'}
+[25.615972] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/local_setup.dsv\n'}
+[25.616240] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Symlinking: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.dsv\n'}
+[25.626022] (-) TimerEvent: {}
+[25.638053] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ament_index/resource_index/packages/ros2_hybrid_a_star\n'}
+[25.639195] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig.cmake\n'}
+[25.639413] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/cmake/ros2_hybrid_a_starConfig-version.cmake\n'}
+[25.639554] (ros2_hybrid_a_star) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nvidia/vcii/wudi/Box_AD/ROS2_Hybrid_A_Star/install/ros2_hybrid_a_star/share/ros2_hybrid_a_star/package.xml\n'}
+[25.642230] (ros2_hybrid_a_star) CommandEnded: {'returncode': 0}
+[25.726118] (-) TimerEvent: {}
+[25.826840] (-) TimerEvent: {}
+[25.927408] (-) TimerEvent: {}
+[26.027818] (-) TimerEvent: {}
+[26.128410] (-) TimerEvent: {}
+[26.228816] (-) TimerEvent: {}
+[26.261182] (ros2_hybrid_a_star) JobEnded: {'identifier': 'ros2_hybrid_a_star', 'rc': 0}
+[26.262415] (-) EventReactorShutdown: {}

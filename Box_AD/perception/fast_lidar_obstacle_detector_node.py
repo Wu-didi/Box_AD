@@ -8,14 +8,18 @@ fast_lidar_obstacle_detector_node.py
 - 订阅 /rslidar_points_prev (sensor_msgs/PointCloud2) - 前方雷达
 - 订阅 /rslidar_points_left (sensor_msgs/PointCloud2) - 左侧雷达
 - 订阅 /rslidar_points_right (sensor_msgs/PointCloud2) - 右侧雷达
+- 订阅 /rslidar_points_top (sensor_msgs/PointCloud2) - 顶部雷达
+- 订阅 /rslidar_points_back (sensor_msgs/PointCloud2) - 后方雷达
 - 粗略估计全局地面高度
 - 在 ROI 内用 2D 栅格统计"高于地面的点"
 - 输出每个占用栅格的中心作为障碍物位置
+- 支持为每个雷达设置不同的最小障碍物高度阈值
 
 优化内容：
 - 使用 numpy 直接解析 PointCloud2，避免 Python for 循环
 - 使用 numpy.bincount 做网格统计，替代字典累加
 - 支持多雷达点云融合
+- 每个雷达独立检测，使用各自的高度阈值
 
 发布：
 - /fast_obstacles (std_msgs/String, JSON)
@@ -48,7 +52,7 @@ from std_msgs.msg import String
 class FastConfig:
     def __init__(self):
         # ROI（沿用你之前的默认）局部规划不需要很大
-        self.xmin = 0.0
+        self.xmin = -2.0
         self.xmax = 40.0
         self.ymin = -15.0
         self.ymax = 15.0
@@ -56,15 +60,20 @@ class FastConfig:
         self.zmax = 3.0
 
         # 估计地面高度用的距离范围
-        self.ground_r_min = 3.0   # 忽略靠太近的
+        self.ground_r_min = 1.0   # 忽略靠太近的
         self.ground_r_max = 20.0  # 太远的也忽略
 
         # 地面高度的分位数（越小越贴近最低点）
         self.ground_percentile = 15.0
 
         # 判定障碍物的高度条件：z > ground_z + min_obstacle_height
-        self.min_obstacle_height = 1.2   # 比地面高 60cm 以上算障碍
-        self.max_obstacle_height = 5.0   # 超过这个当作高架/桥，可要可不要
+        # 为五个雷达分别设置不同的高度阈值
+        self.min_obstacle_height_prev = 0.5    # 前方雷达：比地面高 0.5m 以上算障碍
+        self.min_obstacle_height_left = 1.2    # 左侧雷达：比地面高 1.2m 以上算障碍
+        self.min_obstacle_height_right = 1.0   # 右侧雷达：比地面高 0.5m 以上算障碍
+        self.min_obstacle_height_top = 0.8     # 顶部雷达：比地面高 0.8m 以上算障碍
+        self.min_obstacle_height_back = 0.1    # 后方雷达：比地面高 0.5m 以上算障碍
+        self.max_obstacle_height = 5.0         # 超过这个当作高架/桥，可要可不要
 
         # 有效探测距离范围
         self.obstacle_r_min = 1.0
@@ -149,13 +158,17 @@ def pc2_to_xyz_array_fast(msg: PointCloud2, stride: int = 1) -> np.ndarray:
 
 # -------------------- 主检测逻辑（优化版，纯 numpy 向量化） --------------------
 
-def fast_detect_obstacles_optimized(xyz: np.ndarray, cfg: FastConfig):
+def fast_detect_obstacles_optimized(xyz: np.ndarray, cfg: FastConfig, min_obstacle_height: float = None):
     """
     输入：xyz (N,3)
     输出：列表 obstacles = [{"x":..,"y":..,"z":..,"count":..}, ...]
 
     优化：使用 numpy.bincount 替代 Python 字典累加
+    min_obstacle_height: 如果指定，使用该值覆盖 cfg 中的默认值
     """
+    # 使用传入的高度阈值，如果没有则使用 prev 的默认值
+    if min_obstacle_height is None:
+        min_obstacle_height = cfg.min_obstacle_height_prev
     if xyz.shape[0] == 0:
         return []
 
@@ -189,7 +202,7 @@ def fast_detect_obstacles_optimized(xyz: np.ndarray, cfg: FastConfig):
     obstacle_mask = (
         (r >= cfg.obstacle_r_min) &
         (r <= cfg.obstacle_r_max) &
-        (z >= ground_z + cfg.min_obstacle_height) &
+        (z >= ground_z + min_obstacle_height) &
         (z <= ground_z + cfg.max_obstacle_height)
     )
 
@@ -270,13 +283,14 @@ class FastLidarObstacleDetectorNode(Node):
         # 性能统计
         self.timing_enabled = True
         self.timing_count = 0
-        self.timing_sum_read = 0.0
         self.timing_sum_detect = 0.0
 
         # 点云缓存（存储最新的点云数据）
         self.cloud_prev: Optional[np.ndarray] = None
         self.cloud_left: Optional[np.ndarray] = None
         self.cloud_right: Optional[np.ndarray] = None
+        self.cloud_top: Optional[np.ndarray] = None
+        self.cloud_back: Optional[np.ndarray] = None
         self.latest_header = None  # 保存最新的消息头
 
         # 订阅前方雷达
@@ -303,6 +317,22 @@ class FastLidarObstacleDetectorNode(Node):
             10
         )
 
+        # 订阅顶部雷达
+        self.sub_top = self.create_subscription(
+            PointCloud2,
+            "/rslidar_points_top",
+            self.lidar_callback_top,
+            10
+        )
+
+        # 订阅后方雷达
+        self.sub_back = self.create_subscription(
+            PointCloud2,
+            "/rslidar_points_back",
+            self.lidar_callback_back,
+            10
+        )
+
         self.pub = self.create_publisher(
             String,
             "/fast_obstacles",
@@ -312,6 +342,7 @@ class FastLidarObstacleDetectorNode(Node):
         self.get_logger().info(
             "FastLidarObstacleDetectorNode started (optimized). "
             "Subscribing /rslidar_points_prev, /rslidar_points_left, /rslidar_points_right, "
+            "/rslidar_points_top, /rslidar_points_back, "
             "publishing /fast_obstacles"
         )
 
@@ -339,8 +370,24 @@ class FastLidarObstacleDetectorNode(Node):
             self.latest_header = msg.header
         self.process_merged_clouds()
 
+    def lidar_callback_top(self, msg: PointCloud2):
+        """顶部雷达回调"""
+        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        if xyz.shape[0] > 0:
+            self.cloud_top = xyz
+            self.latest_header = msg.header
+        self.process_merged_clouds()
+
+    def lidar_callback_back(self, msg: PointCloud2):
+        """后方雷达回调"""
+        xyz = pc2_to_xyz_array_fast(msg, stride=self.cfg.sample_stride)
+        if xyz.shape[0] > 0:
+            self.cloud_back = xyz
+            self.latest_header = msg.header
+        self.process_merged_clouds()
+
     def process_merged_clouds(self):
-        """合并多个雷达点云并进行障碍物检测"""
+        """分别处理五个雷达点云（使用各自的高度阈值），然后合并结果"""
         # 检查是否有任何点云数据
         if self.latest_header is None:
             return
@@ -349,49 +396,67 @@ class FastLidarObstacleDetectorNode(Node):
         if self.timing_enabled:
             t0 = time.perf_counter()
 
-        # 合并所有可用的点云
-        clouds_to_merge = []
+        # 分别检测五个雷达的障碍物（使用各自的高度阈值）
+        obstacles_all = []
+        obstacles_prev = []
+        obstacles_left = []
+        obstacles_right = []
+        obstacles_top = []
+        obstacles_back = []
+
         if self.cloud_prev is not None and self.cloud_prev.shape[0] > 0:
-            clouds_to_merge.append(self.cloud_prev)
+            obstacles_prev = fast_detect_obstacles_optimized(
+                self.cloud_prev,
+                self.cfg,
+                min_obstacle_height=self.cfg.min_obstacle_height_prev
+            )
+            obstacles_all.extend(obstacles_prev)
+
         if self.cloud_left is not None and self.cloud_left.shape[0] > 0:
-            clouds_to_merge.append(self.cloud_left)
+            obstacles_left = fast_detect_obstacles_optimized(
+                self.cloud_left,
+                self.cfg,
+                min_obstacle_height=self.cfg.min_obstacle_height_left
+            )
+            obstacles_all.extend(obstacles_left)
+
         if self.cloud_right is not None and self.cloud_right.shape[0] > 0:
-            clouds_to_merge.append(self.cloud_right)
+            obstacles_right = fast_detect_obstacles_optimized(
+                self.cloud_right,
+                self.cfg,
+                min_obstacle_height=self.cfg.min_obstacle_height_right
+            )
+            obstacles_all.extend(obstacles_right)
 
-        if len(clouds_to_merge) == 0:
-            return
+        if self.cloud_top is not None and self.cloud_top.shape[0] > 0:
+            obstacles_top = fast_detect_obstacles_optimized(
+                self.cloud_top,
+                self.cfg,
+                min_obstacle_height=self.cfg.min_obstacle_height_top
+            )
+            obstacles_all.extend(obstacles_top)
 
-        # 合并点云
-        if len(clouds_to_merge) == 1:
-            xyz = clouds_to_merge[0]
-        else:
-            xyz = np.vstack(clouds_to_merge)
+        if self.cloud_back is not None and self.cloud_back.shape[0] > 0:
+            obstacles_back = fast_detect_obstacles_optimized(
+                self.cloud_back,
+                self.cfg,
+                min_obstacle_height=self.cfg.min_obstacle_height_back
+            )
+            obstacles_all.extend(obstacles_back)
 
         if self.timing_enabled:
             t1 = time.perf_counter()
 
-        if xyz.shape[0] == 0:
-            return
-
-        # 障碍物检测（优化版）
-        obstacles = fast_detect_obstacles_optimized(xyz, self.cfg)
-
+        # 统计
         if self.timing_enabled:
-            t2 = time.perf_counter()
-
-            # 统计
             self.timing_count += 1
-            self.timing_sum_read += (t1 - t0)
-            self.timing_sum_detect += (t2 - t1)
+            self.timing_sum_detect += (t1 - t0)
 
             # 每100帧输出一次平均耗时（使用 debug 级别，避免刷屏）
             if self.timing_count % 100 == 0:
-                avg_read = self.timing_sum_read / self.timing_count * 1000
                 avg_detect = self.timing_sum_detect / self.timing_count * 1000
                 self.get_logger().debug(
-                    f"性能统计(平均): 点云合并={avg_read:.2f}ms, "
-                    f"障碍物检测={avg_detect:.2f}ms, "
-                    f"总计={avg_read + avg_detect:.2f}ms"
+                    f"性能统计(平均): 障碍物检测={avg_detect:.2f}ms"
                 )
 
         result = {
@@ -400,16 +465,23 @@ class FastLidarObstacleDetectorNode(Node):
                 "nanosec": int(self.latest_header.stamp.nanosec),
             },
             "frame_id": self.latest_header.frame_id,
-            "has_obstacle": bool(len(obstacles) > 0),
-            "obstacles": obstacles
+            "has_obstacle": bool(len(obstacles_all) > 0),
+            "obstacles": obstacles_all
         }
 
         out = String()
         out.data = json.dumps(result)
         self.pub.publish(out)
 
-        if len(obstacles) > 0:
-            self.get_logger().info(f"检测到 {len(obstacles)} 个障碍物")
+        if len(obstacles_all) > 0:
+            self.get_logger().info(
+                f"检测到 {len(obstacles_all)} 个障碍物 "
+                f"(前:{len(obstacles_prev)}, "
+                f"左:{len(obstacles_left)}, "
+                f"右:{len(obstacles_right)}, "
+                f"顶:{len(obstacles_top)}, "
+                f"后:{len(obstacles_back)})"
+            )
 
 
 def main(args=None):

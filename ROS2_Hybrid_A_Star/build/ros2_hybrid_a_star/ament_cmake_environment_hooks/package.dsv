@@ -1,0 +1,4 @@
+source;share/ros2_hybrid_a_star/local_setup.bash
+source;share/ros2_hybrid_a_star/local_setup.dsv
+source;share/ros2_hybrid_a_star/local_setup.sh
+source;share/ros2_hybrid_a_star/local_setup.zsh
